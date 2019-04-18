@@ -1,0 +1,16 @@
+#!/bin/sh
+
+projects=$(salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ { print $2 }' | sort)
+
+cat >mrconfig <<END
+[DEFAULT]
+jobs = 4
+END
+
+for project in $projects; do
+    cat >>mrconfig <<END
+
+[$project]
+checkout = git clone git@gitlab.com:kalilinux/packages/${project}.git
+END
+done

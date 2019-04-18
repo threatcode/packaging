@@ -1,0 +1,1433 @@
+[DEFAULT]
+jobs = 4
+
+[0trace]
+checkout = git clone git@gitlab.com:kalilinux/packages/0trace.git
+
+[ace-voip]
+checkout = git clone git@gitlab.com:kalilinux/packages/ace-voip.git
+
+[amap]
+checkout = git clone git@gitlab.com:kalilinux/packages/amap.git
+
+[android-sdk]
+checkout = git clone git@gitlab.com:kalilinux/packages/android-sdk.git
+
+[apache-users]
+checkout = git clone git@gitlab.com:kalilinux/packages/apache-users.git
+
+[apt2]
+checkout = git clone git@gitlab.com:kalilinux/packages/apt2.git
+
+[arachni]
+checkout = git clone git@gitlab.com:kalilinux/packages/arachni.git
+
+[arachni-reactor]
+checkout = git clone git@gitlab.com:kalilinux/packages/arachni-reactor.git
+
+[arachni-rpc]
+checkout = git clone git@gitlab.com:kalilinux/packages/arachni-rpc.git
+
+[armitage]
+checkout = git clone git@gitlab.com:kalilinux/packages/armitage.git
+
+[asleap]
+checkout = git clone git@gitlab.com:kalilinux/packages/asleap.git
+
+[automater]
+checkout = git clone git@gitlab.com:kalilinux/packages/automater.git
+
+[b374k]
+checkout = git clone git@gitlab.com:kalilinux/packages/b374k.git
+
+[base-files]
+checkout = git clone git@gitlab.com:kalilinux/packages/base-files.git
+
+[bdfproxy]
+checkout = git clone git@gitlab.com:kalilinux/packages/bdfproxy.git
+
+[bed]
+checkout = git clone git@gitlab.com:kalilinux/packages/bed.git
+
+[beef-xss]
+checkout = git clone git@gitlab.com:kalilinux/packages/beef-xss.git
+
+[bettercap]
+checkout = git clone git@gitlab.com:kalilinux/packages/bettercap.git
+
+[bettercap-caplets]
+checkout = git clone git@gitlab.com:kalilinux/packages/bettercap-caplets.git
+
+[blindelephant]
+checkout = git clone git@gitlab.com:kalilinux/packages/blindelephant.git
+
+[bloodhound]
+checkout = git clone git@gitlab.com:kalilinux/packages/bloodhound.git
+
+[bluelog]
+checkout = git clone git@gitlab.com:kalilinux/packages/bluelog.git
+
+[blueranger]
+checkout = git clone git@gitlab.com:kalilinux/packages/blueranger.git
+
+[bluesnarfer]
+checkout = git clone git@gitlab.com:kalilinux/packages/bluesnarfer.git
+
+[bulk-extractor]
+checkout = git clone git@gitlab.com:kalilinux/packages/bulk-extractor.git
+
+[bully]
+checkout = git clone git@gitlab.com:kalilinux/packages/bully.git
+
+[burpsuite]
+checkout = git clone git@gitlab.com:kalilinux/packages/burpsuite.git
+
+[cdpsnarf]
+checkout = git clone git@gitlab.com:kalilinux/packages/cdpsnarf.git
+
+[cherrytree]
+checkout = git clone git@gitlab.com:kalilinux/packages/cherrytree.git
+
+[cisco-auditing-tool]
+checkout = git clone git@gitlab.com:kalilinux/packages/cisco-auditing-tool.git
+
+[cisco-global-exploiter]
+checkout = git clone git@gitlab.com:kalilinux/packages/cisco-global-exploiter.git
+
+[cisco-ocs]
+checkout = git clone git@gitlab.com:kalilinux/packages/cisco-ocs.git
+
+[cisco-torch]
+checkout = git clone git@gitlab.com:kalilinux/packages/cisco-torch.git
+
+[cloudflare-scrape]
+checkout = git clone git@gitlab.com:kalilinux/packages/cloudflare-scrape.git
+
+[clusterd]
+checkout = git clone git@gitlab.com:kalilinux/packages/clusterd.git
+
+[cmospwd]
+checkout = git clone git@gitlab.com:kalilinux/packages/cmospwd.git
+
+[commix]
+checkout = git clone git@gitlab.com:kalilinux/packages/commix.git
+
+[conky-manager]
+checkout = git clone git@gitlab.com:kalilinux/packages/conky-manager.git
+
+[cookie-cadger]
+checkout = git clone git@gitlab.com:kalilinux/packages/cookie-cadger.git
+
+[copy-router-config]
+checkout = git clone git@gitlab.com:kalilinux/packages/copy-router-config.git
+
+[crackle]
+checkout = git clone git@gitlab.com:kalilinux/packages/crackle.git
+
+[crackmapexec]
+checkout = git clone git@gitlab.com:kalilinux/packages/crackmapexec.git
+
+[creddump]
+checkout = git clone git@gitlab.com:kalilinux/packages/creddump.git
+
+[creddump7]
+checkout = git clone git@gitlab.com:kalilinux/packages/creddump7.git
+
+[crowbar]
+checkout = git clone git@gitlab.com:kalilinux/packages/crowbar.git
+
+[cryptcat]
+checkout = git clone git@gitlab.com:kalilinux/packages/cryptcat.git
+
+[cryptsetup]
+checkout = git clone git@gitlab.com:kalilinux/packages/cryptsetup.git
+
+[cuckoo]
+checkout = git clone git@gitlab.com:kalilinux/packages/cuckoo.git
+
+[cupid-wpa]
+checkout = git clone git@gitlab.com:kalilinux/packages/cupid-wpa.git
+
+[cymothoa]
+checkout = git clone git@gitlab.com:kalilinux/packages/cymothoa.git
+
+[datasploit]
+checkout = git clone git@gitlab.com:kalilinux/packages/datasploit.git
+
+[davtest]
+checkout = git clone git@gitlab.com:kalilinux/packages/davtest.git
+
+[dbd]
+checkout = git clone git@gitlab.com:kalilinux/packages/dbd.git
+
+[dbeaver]
+checkout = git clone git@gitlab.com:kalilinux/packages/dbeaver.git
+
+[ddrescue]
+checkout = git clone git@gitlab.com:kalilinux/packages/ddrescue.git
+
+[debian-installer]
+checkout = git clone git@gitlab.com:kalilinux/packages/debian-installer.git
+
+[deblaze]
+checkout = git clone git@gitlab.com:kalilinux/packages/deblaze.git
+
+[desktop-base]
+checkout = git clone git@gitlab.com:kalilinux/packages/desktop-base.git
+
+[device-pharmer]
+checkout = git clone git@gitlab.com:kalilinux/packages/device-pharmer.git
+
+[dex2jar]
+checkout = git clone git@gitlab.com:kalilinux/packages/dex2jar.git
+
+[dirbuster]
+checkout = git clone git@gitlab.com:kalilinux/packages/dirbuster.git
+
+[dmitry]
+checkout = git clone git@gitlab.com:kalilinux/packages/dmitry.git
+
+[dnmap]
+checkout = git clone git@gitlab.com:kalilinux/packages/dnmap.git
+
+[dnschef]
+checkout = git clone git@gitlab.com:kalilinux/packages/dnschef.git
+
+[dnsenum]
+checkout = git clone git@gitlab.com:kalilinux/packages/dnsenum.git
+
+[dnsmap]
+checkout = git clone git@gitlab.com:kalilinux/packages/dnsmap.git
+
+[dotdotpwn]
+checkout = git clone git@gitlab.com:kalilinux/packages/dotdotpwn.git
+
+[dpkg]
+checkout = git clone git@gitlab.com:kalilinux/packages/dpkg.git
+
+[dradis]
+checkout = git clone git@gitlab.com:kalilinux/packages/dradis.git
+
+[dumpzilla]
+checkout = git clone git@gitlab.com:kalilinux/packages/dumpzilla.git
+
+[eapmd5pass]
+checkout = git clone git@gitlab.com:kalilinux/packages/eapmd5pass.git
+
+[enum4linux]
+checkout = git clone git@gitlab.com:kalilinux/packages/enum4linux.git
+
+[enumiax]
+checkout = git clone git@gitlab.com:kalilinux/packages/enumiax.git
+
+[evil-ssdp]
+checkout = git clone git@gitlab.com:kalilinux/packages/evil-ssdp.git
+
+[exe2hexbat]
+checkout = git clone git@gitlab.com:kalilinux/packages/exe2hexbat.git
+
+[exploitdb]
+checkout = git clone git@gitlab.com:kalilinux/packages/exploitdb.git
+
+[exploitdb-bin-sploits]
+checkout = git clone git@gitlab.com:kalilinux/packages/exploitdb-bin-sploits.git
+
+[exploitdb-papers]
+checkout = git clone git@gitlab.com:kalilinux/packages/exploitdb-papers.git
+
+[eyewitness]
+checkout = git clone git@gitlab.com:kalilinux/packages/eyewitness.git
+
+[fern-wifi-cracker]
+checkout = git clone git@gitlab.com:kalilinux/packages/fern-wifi-cracker.git
+
+[ferret-sidejack]
+checkout = git clone git@gitlab.com:kalilinux/packages/ferret-sidejack.git
+
+[fierce]
+checkout = git clone git@gitlab.com:kalilinux/packages/fierce.git
+
+[fiked]
+checkout = git clone git@gitlab.com:kalilinux/packages/fiked.git
+
+[fimap]
+checkout = git clone git@gitlab.com:kalilinux/packages/fimap.git
+
+[findmyhash]
+checkout = git clone git@gitlab.com:kalilinux/packages/findmyhash.git
+
+[firewalk]
+checkout = git clone git@gitlab.com:kalilinux/packages/firewalk.git
+
+[firmware-mod-kit]
+checkout = git clone git@gitlab.com:kalilinux/packages/firmware-mod-kit.git
+
+[flask-restless]
+checkout = git clone git@gitlab.com:kalilinux/packages/flask-restless.git
+
+[fragroute]
+checkout = git clone git@gitlab.com:kalilinux/packages/fragroute.git
+
+[fragrouter]
+checkout = git clone git@gitlab.com:kalilinux/packages/fragrouter.git
+
+[framework2]
+checkout = git clone git@gitlab.com:kalilinux/packages/framework2.git
+
+[freeradius-wpe]
+checkout = git clone git@gitlab.com:kalilinux/packages/freeradius-wpe.git
+
+[fruitywifi]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi.git
+
+[fruitywifi-module-3g-4g]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-3g-4g.git
+
+[fruitywifi-module-ap]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-ap.git
+
+[fruitywifi-module-api]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-api.git
+
+[fruitywifi-module-automaton]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-automaton.git
+
+[fruitywifi-module-autossh]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-autossh.git
+
+[fruitywifi-module-autostart]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-autostart.git
+
+[fruitywifi-module-bdfproxy]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-bdfproxy.git
+
+[fruitywifi-module-beef]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-beef.git
+
+[fruitywifi-module-bettercap]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-bettercap.git
+
+[fruitywifi-module-captive]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-captive.git
+
+[fruitywifi-module-detectdeauth]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-detectdeauth.git
+
+[fruitywifi-module-detectrogue]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-detectrogue.git
+
+[fruitywifi-module-devicefinder]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-devicefinder.git
+
+[fruitywifi-module-dnsspoof]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-dnsspoof.git
+
+[fruitywifi-module-ettercap]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-ettercap.git
+
+[fruitywifi-module-fruitydns]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-fruitydns.git
+
+[fruitywifi-module-fruityproxy]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-fruityproxy.git
+
+[fruitywifi-module-hopper]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-hopper.git
+
+[fruitywifi-module-karma]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-karma.git
+
+[fruitywifi-module-kismet]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-kismet.git
+
+[fruitywifi-module-mana]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-mana.git
+
+[fruitywifi-module-mdk3]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-mdk3.git
+
+[fruitywifi-module-metasploit]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-metasploit.git
+
+[fruitywifi-module-meterpreter]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-meterpreter.git
+
+[fruitywifi-module-nessus]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-nessus.git
+
+[fruitywifi-module-nginx]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-nginx.git
+
+[fruitywifi-module-ngrep]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-ngrep.git
+
+[fruitywifi-module-nmap]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-nmap.git
+
+[fruitywifi-module-nmcli]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-nmcli.git
+
+[fruitywifi-module-openvpn]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-openvpn.git
+
+[fruitywifi-module-phishing]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-phishing.git
+
+[fruitywifi-module-recon]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-recon.git
+
+[fruitywifi-module-responder]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-responder.git
+
+[fruitywifi-module-rpitwit]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-rpitwit.git
+
+[fruitywifi-module-squid3]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-squid3.git
+
+[fruitywifi-module-sshuttle]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-sshuttle.git
+
+[fruitywifi-module-sslstrip]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-sslstrip.git
+
+[fruitywifi-module-sslstrip2]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-sslstrip2.git
+
+[fruitywifi-module-stalker]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-stalker.git
+
+[fruitywifi-module-supplicant]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-supplicant.git
+
+[fruitywifi-module-tapper]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-tapper.git
+
+[fruitywifi-module-tcpdump]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-tcpdump.git
+
+[fruitywifi-module-tor]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-tor.git
+
+[fruitywifi-module-urlsnarf]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-urlsnarf.git
+
+[fruitywifi-module-vfeed]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-vfeed.git
+
+[fruitywifi-module-whatsapp]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-whatsapp.git
+
+[fruitywifi-module-wifirecon]
+checkout = git clone git@gitlab.com:kalilinux/packages/fruitywifi-module-wifirecon.git
+
+[ftester]
+checkout = git clone git@gitlab.com:kalilinux/packages/ftester.git
+
+[fxscintilla]
+checkout = git clone git@gitlab.com:kalilinux/packages/fxscintilla.git
+
+[gdb-peda]
+checkout = git clone git@gitlab.com:kalilinux/packages/gdb-peda.git
+
+[ghost-phisher]
+checkout = git clone git@gitlab.com:kalilinux/packages/ghost-phisher.git
+
+[giskismet]
+checkout = git clone git@gitlab.com:kalilinux/packages/giskismet.git
+
+[gnome-shell-extension-proxyswitcher]
+checkout = git clone git@gitlab.com:kalilinux/packages/gnome-shell-extension-proxyswitcher.git
+
+[gnome-shell-extensions]
+checkout = git clone git@gitlab.com:kalilinux/packages/gnome-shell-extensions.git
+
+[gnome-terminal]
+checkout = git clone git@gitlab.com:kalilinux/packages/gnome-terminal.git
+
+[gnome-theme-kali]
+checkout = git clone git@gitlab.com:kalilinux/packages/gnome-theme-kali.git
+
+[golang-github-bettercap-gatt]
+checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-bettercap-gatt.git
+
+[golang-github-bettercap-readline]
+checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-bettercap-readline.git
+
+[golang-github-mgutz-logxi]
+checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-mgutz-logxi.git
+
+[golismero]
+checkout = git clone git@gitlab.com:kalilinux/packages/golismero.git
+
+[goofile]
+checkout = git clone git@gitlab.com:kalilinux/packages/goofile.git
+
+[google-nexus-tools]
+checkout = git clone git@gitlab.com:kalilinux/packages/google-nexus-tools.git
+
+[gpp-decrypt]
+checkout = git clone git@gitlab.com:kalilinux/packages/gpp-decrypt.git
+
+[grabber]
+checkout = git clone git@gitlab.com:kalilinux/packages/grabber.git
+
+[gr-baz]
+checkout = git clone git@gitlab.com:kalilinux/packages/gr-baz.git
+
+[grub2]
+checkout = git clone git@gitlab.com:kalilinux/packages/grub2.git
+
+[hackersh]
+checkout = git clone git@gitlab.com:kalilinux/packages/hackersh.git
+
+[hamster-sidejack]
+checkout = git clone git@gitlab.com:kalilinux/packages/hamster-sidejack.git
+
+[hashcat-utils]
+checkout = git clone git@gitlab.com:kalilinux/packages/hashcat-utils.git
+
+[hash-identifier]
+checkout = git clone git@gitlab.com:kalilinux/packages/hash-identifier.git
+
+[hb-honeypot]
+checkout = git clone git@gitlab.com:kalilinux/packages/hb-honeypot.git
+
+[hcxdumptool]
+checkout = git clone git@gitlab.com:kalilinux/packages/hcxdumptool.git
+
+[hcxtools]
+checkout = git clone git@gitlab.com:kalilinux/packages/hcxtools.git
+
+[heartleech]
+checkout = git clone git@gitlab.com:kalilinux/packages/heartleech.git
+
+[hexinject]
+checkout = git clone git@gitlab.com:kalilinux/packages/hexinject.git
+
+[hexorbase]
+checkout = git clone git@gitlab.com:kalilinux/packages/hexorbase.git
+
+[hostapd-wpe]
+checkout = git clone git@gitlab.com:kalilinux/packages/hostapd-wpe.git
+
+[hotpatch]
+checkout = git clone git@gitlab.com:kalilinux/packages/hotpatch.git
+
+[htshells]
+checkout = git clone git@gitlab.com:kalilinux/packages/htshells.git
+
+[httprint]
+checkout = git clone git@gitlab.com:kalilinux/packages/httprint.git
+
+[hurl]
+checkout = git clone git@gitlab.com:kalilinux/packages/hurl.git
+
+[hyperion]
+checkout = git clone git@gitlab.com:kalilinux/packages/hyperion.git
+
+[iaxflood]
+checkout = git clone git@gitlab.com:kalilinux/packages/iaxflood.git
+
+[ident-user-enum]
+checkout = git clone git@gitlab.com:kalilinux/packages/ident-user-enum.git
+
+[impacket]
+checkout = git clone git@gitlab.com:kalilinux/packages/impacket.git
+
+[impacket-scripts]
+checkout = git clone git@gitlab.com:kalilinux/packages/impacket-scripts.git
+
+[inetsim]
+checkout = git clone git@gitlab.com:kalilinux/packages/inetsim.git
+
+[init-system-helpers]
+checkout = git clone git@gitlab.com:kalilinux/packages/init-system-helpers.git
+
+[inspy]
+checkout = git clone git@gitlab.com:kalilinux/packages/inspy.git
+
+[intersect]
+checkout = git clone git@gitlab.com:kalilinux/packages/intersect.git
+
+[intrace]
+checkout = git clone git@gitlab.com:kalilinux/packages/intrace.git
+
+[inviteflood]
+checkout = git clone git@gitlab.com:kalilinux/packages/inviteflood.git
+
+[ipv6-toolkit]
+checkout = git clone git@gitlab.com:kalilinux/packages/ipv6-toolkit.git
+
+[ismtp]
+checkout = git clone git@gitlab.com:kalilinux/packages/ismtp.git
+
+[isr-evilgrade]
+checkout = git clone git@gitlab.com:kalilinux/packages/isr-evilgrade.git
+
+[jad]
+checkout = git clone git@gitlab.com:kalilinux/packages/jad.git
+
+[javasnoop]
+checkout = git clone git@gitlab.com:kalilinux/packages/javasnoop.git
+
+[jboss-autopwn]
+checkout = git clone git@gitlab.com:kalilinux/packages/jboss-autopwn.git
+
+[jd-gui]
+checkout = git clone git@gitlab.com:kalilinux/packages/jd-gui.git
+
+[john]
+checkout = git clone git@gitlab.com:kalilinux/packages/john.git
+
+[johnny]
+checkout = git clone git@gitlab.com:kalilinux/packages/johnny.git
+
+[joomscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/joomscan.git
+
+[jsp-file-browser]
+checkout = git clone git@gitlab.com:kalilinux/packages/jsp-file-browser.git
+
+[jsql]
+checkout = git clone git@gitlab.com:kalilinux/packages/jsql.git
+
+[kali-archive-keyring]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-archive-keyring.git
+
+[kalibrate-rtl]
+checkout = git clone git@gitlab.com:kalilinux/packages/kalibrate-rtl.git
+
+[kali-debtags]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-debtags.git
+
+[kali-defaults]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-defaults.git
+
+[kali-hw-gemini]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-hw-gemini.git
+
+[kali-menu]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-menu.git
+
+[kali-meta]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-meta.git
+
+[kali-root-login]
+checkout = git clone git@gitlab.com:kalilinux/packages/kali-root-login.git
+
+[keimpx]
+checkout = git clone git@gitlab.com:kalilinux/packages/keimpx.git
+
+[kerberoast]
+checkout = git clone git@gitlab.com:kalilinux/packages/kerberoast.git
+
+[killerbee]
+checkout = git clone git@gitlab.com:kalilinux/packages/killerbee.git
+
+[king-phisher]
+checkout = git clone git@gitlab.com:kalilinux/packages/king-phisher.git
+
+[laudanum]
+checkout = git clone git@gitlab.com:kalilinux/packages/laudanum.git
+
+[lbd]
+checkout = git clone git@gitlab.com:kalilinux/packages/lbd.git
+
+[libcrafter]
+checkout = git clone git@gitlab.com:kalilinux/packages/libcrafter.git
+
+[libcrypt-mcrypt-perl]
+checkout = git clone git@gitlab.com:kalilinux/packages/libcrypt-mcrypt-perl.git
+
+[libfindrtp]
+checkout = git clone git@gitlab.com:kalilinux/packages/libfindrtp.git
+
+[libnet-pcaputils-perl]
+checkout = git clone git@gitlab.com:kalilinux/packages/libnet-pcaputils-perl.git
+
+[libstree]
+checkout = git clone git@gitlab.com:kalilinux/packages/libstree.git
+
+[linux]
+checkout = git clone git@gitlab.com:kalilinux/packages/linux.git
+
+[linux-exploit-suggester]
+checkout = git clone git@gitlab.com:kalilinux/packages/linux-exploit-suggester.git
+
+[linux-latest]
+checkout = git clone git@gitlab.com:kalilinux/packages/linux-latest.git
+
+[live-build]
+checkout = git clone git@gitlab.com:kalilinux/packages/live-build.git
+
+[maltego]
+checkout = git clone git@gitlab.com:kalilinux/packages/maltego.git
+
+[maltego-teeth]
+checkout = git clone git@gitlab.com:kalilinux/packages/maltego-teeth.git
+
+[mana-toolkit]
+checkout = git clone git@gitlab.com:kalilinux/packages/mana-toolkit.git
+
+[metagoofil]
+checkout = git clone git@gitlab.com:kalilinux/packages/metagoofil.git
+
+[metasploit-framework]
+checkout = git clone git@gitlab.com:kalilinux/packages/metasploit-framework.git
+
+[mfterm]
+checkout = git clone git@gitlab.com:kalilinux/packages/mfterm.git
+
+[mimikatz]
+checkout = git clone git@gitlab.com:kalilinux/packages/mimikatz.git
+
+[miranda]
+checkout = git clone git@gitlab.com:kalilinux/packages/miranda.git
+
+[mitmf]
+checkout = git clone git@gitlab.com:kalilinux/packages/mitmf.git
+
+[mitmflib]
+checkout = git clone git@gitlab.com:kalilinux/packages/mitmflib.git
+
+[msfpc]
+checkout = git clone git@gitlab.com:kalilinux/packages/msfpc.git
+
+[multiforcer]
+checkout = git clone git@gitlab.com:kalilinux/packages/multiforcer.git
+
+[multimac]
+checkout = git clone git@gitlab.com:kalilinux/packages/multimac.git
+
+[nassl]
+checkout = git clone git@gitlab.com:kalilinux/packages/nassl.git
+
+[nbtscan-unixwiz]
+checkout = git clone git@gitlab.com:kalilinux/packages/nbtscan-unixwiz.git
+
+[ncat-w32]
+checkout = git clone git@gitlab.com:kalilinux/packages/ncat-w32.git
+
+[neo4j]
+checkout = git clone git@gitlab.com:kalilinux/packages/neo4j.git
+
+[netcfg]
+checkout = git clone git@gitlab.com:kalilinux/packages/netcfg.git
+
+[nethunter-utils]
+checkout = git clone git@gitlab.com:kalilinux/packages/nethunter-utils.git
+
+[net-retriever]
+checkout = git clone git@gitlab.com:kalilinux/packages/net-retriever.git
+
+[nfspy]
+checkout = git clone git@gitlab.com:kalilinux/packages/nfspy.git
+
+[nikto]
+checkout = git clone git@gitlab.com:kalilinux/packages/nikto.git
+
+[nipper-ng]
+checkout = git clone git@gitlab.com:kalilinux/packages/nipper-ng.git
+
+[nishang]
+checkout = git clone git@gitlab.com:kalilinux/packages/nishang.git
+
+[nmap]
+checkout = git clone git@gitlab.com:kalilinux/packages/nmap.git
+
+[oclgausscrack]
+checkout = git clone git@gitlab.com:kalilinux/packages/oclgausscrack.git
+
+[oclhashcat]
+checkout = git clone git@gitlab.com:kalilinux/packages/oclhashcat.git
+
+[odat]
+checkout = git clone git@gitlab.com:kalilinux/packages/odat.git
+
+[odpi]
+checkout = git clone git@gitlab.com:kalilinux/packages/odpi.git
+
+[ohrwurm]
+checkout = git clone git@gitlab.com:kalilinux/packages/ohrwurm.git
+
+[ollydbg]
+checkout = git clone git@gitlab.com:kalilinux/packages/ollydbg.git
+
+[openvas]
+checkout = git clone git@gitlab.com:kalilinux/packages/openvas.git
+
+[oscanner]
+checkout = git clone git@gitlab.com:kalilinux/packages/oscanner.git
+
+[osrframework]
+checkout = git clone git@gitlab.com:kalilinux/packages/osrframework.git
+
+[owasp-mantra-ff]
+checkout = git clone git@gitlab.com:kalilinux/packages/owasp-mantra-ff.git
+
+[pack]
+checkout = git clone git@gitlab.com:kalilinux/packages/pack.git
+
+[padbuster]
+checkout = git clone git@gitlab.com:kalilinux/packages/padbuster.git
+
+[paros]
+checkout = git clone git@gitlab.com:kalilinux/packages/paros.git
+
+[parsero]
+checkout = git clone git@gitlab.com:kalilinux/packages/parsero.git
+
+[passing-the-hash]
+checkout = git clone git@gitlab.com:kalilinux/packages/passing-the-hash.git
+
+[pdfbook]
+checkout = git clone git@gitlab.com:kalilinux/packages/pdfbook.git
+
+[pdfid]
+checkout = git clone git@gitlab.com:kalilinux/packages/pdfid.git
+
+[pdf-parser]
+checkout = git clone git@gitlab.com:kalilinux/packages/pdf-parser.git
+
+[pdgmail]
+checkout = git clone git@gitlab.com:kalilinux/packages/pdgmail.git
+
+[peepdf]
+checkout = git clone git@gitlab.com:kalilinux/packages/peepdf.git
+
+[perl-cisco-copyconfig]
+checkout = git clone git@gitlab.com:kalilinux/packages/perl-cisco-copyconfig.git
+
+[phishery]
+checkout = git clone git@gitlab.com:kalilinux/packages/phishery.git
+
+[pipal]
+checkout = git clone git@gitlab.com:kalilinux/packages/pipal.git
+
+[plecost]
+checkout = git clone git@gitlab.com:kalilinux/packages/plecost.git
+
+[polenum]
+checkout = git clone git@gitlab.com:kalilinux/packages/polenum.git
+
+[powerfuzzer]
+checkout = git clone git@gitlab.com:kalilinux/packages/powerfuzzer.git
+
+[powersploit]
+checkout = git clone git@gitlab.com:kalilinux/packages/powersploit.git
+
+[protos-sip]
+checkout = git clone git@gitlab.com:kalilinux/packages/protos-sip.git
+
+[proxystrike]
+checkout = git clone git@gitlab.com:kalilinux/packages/proxystrike.git
+
+[pwnat]
+checkout = git clone git@gitlab.com:kalilinux/packages/pwnat.git
+
+[pyexcel]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel.git
+
+[pyexcel-io]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel-io.git
+
+[pyexcel-ods]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel-ods.git
+
+[pyexcel-text]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel-text.git
+
+[pyexcel-xls]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel-xls.git
+
+[pyexcel-xlsx]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyexcel-xlsx.git
+
+[py-gfm]
+checkout = git clone git@gitlab.com:kalilinux/packages/py-gfm.git
+
+[pyguacamole]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyguacamole.git
+
+[pyinstaller]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyinstaller.git
+
+[pylibemu]
+checkout = git clone git@gitlab.com:kalilinux/packages/pylibemu.git
+
+[pyrit-opencl]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyrit-opencl.git
+
+[pysmb]
+checkout = git clone git@gitlab.com:kalilinux/packages/pysmb.git
+
+[pytesseract]
+checkout = git clone git@gitlab.com:kalilinux/packages/pytesseract.git
+
+[python-advancedhttpserver]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-advancedhttpserver.git
+
+[python-aes]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-aes.git
+
+[python-bluepy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-bluepy.git
+
+[python-clamd]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-clamd.git
+
+[python-clearbit]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-clearbit.git
+
+[python-config]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-config.git
+
+[python-cx-oracle]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-cx-oracle.git
+
+[python-darts-lib-utils-lru]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-darts-lib-utils-lru.git
+
+[python-egghatch]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-egghatch.git
+
+[python-emailahoy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-emailahoy.git
+
+[python-email-validator]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-email-validator.git
+
+[python-faraday]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-faraday.git
+
+[python-filebytes]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-filebytes.git
+
+[python-ftputil]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-ftputil.git
+
+[python-graphene-sqlalchemy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-graphene-sqlalchemy.git
+
+[python-graphql-core]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-graphql-core.git
+
+[python-graphql-relay]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-graphql-relay.git
+
+[python-harparser]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-harparser.git
+
+[python-httpreplay]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-httpreplay.git
+
+[python-ipwhois]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-ipwhois.git
+
+[python-json2html]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-json2html.git
+
+[python-ldapdomaindump]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-ldapdomaindump.git
+
+[python-magic-ahupp]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-magic-ahupp.git
+
+[python-mockito]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-mockito.git
+
+[python-netfilterqueue]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-netfilterqueue.git
+
+[python-oauth2]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-oauth2.git
+
+[python-oletools]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-oletools.git
+
+[python-piplapis]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-piplapis.git
+
+[python-promise]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-promise.git
+
+[python-pydal]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pydal.git
+
+[python-pydeep]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pydeep.git
+
+[python-pygithub]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pygithub.git
+
+[python-pymisp]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pymisp.git
+
+[python-pyric]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pyric.git
+
+[python-pythonect]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pythonect.git
+
+[python-pywhois]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-pywhois.git
+
+[python-rdpy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-rdpy.git
+
+[python-roach]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-roach.git
+
+[python-roguehostapd]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-roguehostapd.git
+
+[python-rtlsdr]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-rtlsdr.git
+
+[python-rx]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-rx.git
+
+[python-sflock]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-sflock.git
+
+[python-stopit]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-stopit.git
+
+[python-symmetric-jsonrpc]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-symmetric-jsonrpc.git
+
+[python-tld]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-tld.git
+
+[python-twitter-toolset]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-twitter-toolset.git
+
+[python-ua-parser]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-ua-parser.git
+
+[python-unicorn]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-unicorn.git
+
+[python-unqlite]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-unqlite.git
+
+[python-user-agents]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-user-agents.git
+
+[python-visvis]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-visvis.git
+
+[python-wakeonlan]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-wakeonlan.git
+
+[python-wappalyzer]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-wappalyzer.git
+
+[python-webargs]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-webargs.git
+
+[python-wsproto]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-wsproto.git
+
+[pyuserinput]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyuserinput.git
+
+[pyv8]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyv8.git
+
+[rainbowcrack]
+checkout = git clone git@gitlab.com:kalilinux/packages/rainbowcrack.git
+
+[rcracki-mt]
+checkout = git clone git@gitlab.com:kalilinux/packages/rcracki-mt.git
+
+[realtek-rtl88xxau-dkms]
+checkout = git clone git@gitlab.com:kalilinux/packages/realtek-rtl88xxau-dkms.git
+
+[rebind]
+checkout = git clone git@gitlab.com:kalilinux/packages/rebind.git
+
+[recstudio]
+checkout = git clone git@gitlab.com:kalilinux/packages/recstudio.git
+
+[redfang]
+checkout = git clone git@gitlab.com:kalilinux/packages/redfang.git
+
+[redsnarf]
+checkout = git clone git@gitlab.com:kalilinux/packages/redsnarf.git
+
+[regripper]
+checkout = git clone git@gitlab.com:kalilinux/packages/regripper.git
+
+[responder]
+checkout = git clone git@gitlab.com:kalilinux/packages/responder.git
+
+[rfcat]
+checkout = git clone git@gitlab.com:kalilinux/packages/rfcat.git
+
+[rfidiot]
+checkout = git clone git@gitlab.com:kalilinux/packages/rfidiot.git
+
+[ridenum]
+checkout = git clone git@gitlab.com:kalilinux/packages/ridenum.git
+
+[rootskel-gtk]
+checkout = git clone git@gitlab.com:kalilinux/packages/rootskel-gtk.git
+
+[routersploit]
+checkout = git clone git@gitlab.com:kalilinux/packages/routersploit.git
+
+[rsmangler]
+checkout = git clone git@gitlab.com:kalilinux/packages/rsmangler.git
+
+[rtlsdr-scanner]
+checkout = git clone git@gitlab.com:kalilinux/packages/rtlsdr-scanner.git
+
+[rtpbreak]
+checkout = git clone git@gitlab.com:kalilinux/packages/rtpbreak.git
+
+[rtpflood]
+checkout = git clone git@gitlab.com:kalilinux/packages/rtpflood.git
+
+[rtpinsertsound]
+checkout = git clone git@gitlab.com:kalilinux/packages/rtpinsertsound.git
+
+[rtpmixsound]
+checkout = git clone git@gitlab.com:kalilinux/packages/rtpmixsound.git
+
+[ruby-buftok]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-buftok.git
+
+[ruby-cms-scanner]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-cms-scanner.git
+
+[ruby-dm-core]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-dm-core.git
+
+[ruby-dm-do-adapter]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-dm-do-adapter.git
+
+[ruby-dm-migrations]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-dm-migrations.git
+
+[ruby-dm-sqlite-adapter]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-dm-sqlite-adapter.git
+
+[ruby-em-proxy]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-em-proxy.git
+
+[ruby-em-websocket]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-em-websocket.git
+
+[ruby-espeak]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-espeak.git
+
+[ruby-fxruby]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-fxruby.git
+
+[ruby-glu]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-glu.git
+
+[ruby-librex]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-librex.git
+
+[ruby-libxml4r]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-libxml4r.git
+
+[ruby-maxmind-db]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-maxmind-db.git
+
+[ruby-memoizable]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-memoizable.git
+
+[ruby-mojo-magick]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-mojo-magick.git
+
+[ruby-msfrpc-client]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-msfrpc-client.git
+
+[ruby-net-dns]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-net-dns.git
+
+[ruby-net-http-pipeline]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-net-http-pipeline.git
+
+[ruby-network-interface]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-network-interface.git
+
+[ruby-nfnetlink]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-nfnetlink.git
+
+[ruby-nfqueue]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-nfqueue.git
+
+[ruby-opt-parse-validator]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-opt-parse-validator.git
+
+[ruby-parseconfig]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-parseconfig.git
+
+[ruby-plist4r]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-plist4r.git
+
+[ruby-ponder]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-ponder.git
+
+[ruby-progressbar]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-progressbar.git
+
+[ruby-qr4r]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-qr4r.git
+
+[ruby-rubydns]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-rubydns.git
+
+[ruby-ruby-progressbar]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-ruby-progressbar.git
+
+[ruby-rushover]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-rushover.git
+
+[ruby-source-map]
+checkout = git clone git@gitlab.com:kalilinux/packages/ruby-source-map.git
+
+[rule-engine]
+checkout = git clone git@gitlab.com:kalilinux/packages/rule-engine.git
+
+[sakis3g]
+checkout = git clone git@gitlab.com:kalilinux/packages/sakis3g.git
+
+[sandi]
+checkout = git clone git@gitlab.com:kalilinux/packages/sandi.git
+
+[sbd]
+checkout = git clone git@gitlab.com:kalilinux/packages/sbd.git
+
+[sctpscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/sctpscan.git
+
+[seclists]
+checkout = git clone git@gitlab.com:kalilinux/packages/seclists.git
+
+[secure-socket-funneling]
+checkout = git clone git@gitlab.com:kalilinux/packages/secure-socket-funneling.git
+
+[set]
+checkout = git clone git@gitlab.com:kalilinux/packages/set.git
+
+[sfuzz]
+checkout = git clone git@gitlab.com:kalilinux/packages/sfuzz.git
+
+[shellnoob]
+checkout = git clone git@gitlab.com:kalilinux/packages/shellnoob.git
+
+[shellter]
+checkout = git clone git@gitlab.com:kalilinux/packages/shellter.git
+
+[sidguesser]
+checkout = git clone git@gitlab.com:kalilinux/packages/sidguesser.git
+
+[siparmyknife]
+checkout = git clone git@gitlab.com:kalilinux/packages/siparmyknife.git
+
+[sipp]
+checkout = git clone git@gitlab.com:kalilinux/packages/sipp.git
+
+[sipvicious]
+checkout = git clone git@gitlab.com:kalilinux/packages/sipvicious.git
+
+[skipfish]
+checkout = git clone git@gitlab.com:kalilinux/packages/skipfish.git
+
+[smali]
+checkout = git clone git@gitlab.com:kalilinux/packages/smali.git
+
+[smtp-user-enum]
+checkout = git clone git@gitlab.com:kalilinux/packages/smtp-user-enum.git
+
+[sniffjoke]
+checkout = git clone git@gitlab.com:kalilinux/packages/sniffjoke.git
+
+[snmpcheck]
+checkout = git clone git@gitlab.com:kalilinux/packages/snmpcheck.git
+
+[snmpenum]
+checkout = git clone git@gitlab.com:kalilinux/packages/snmpenum.git
+
+[sparta]
+checkout = git clone git@gitlab.com:kalilinux/packages/sparta.git
+
+[spike]
+checkout = git clone git@gitlab.com:kalilinux/packages/spike.git
+
+[spooftooph]
+checkout = git clone git@gitlab.com:kalilinux/packages/spooftooph.git
+
+[spray]
+checkout = git clone git@gitlab.com:kalilinux/packages/spray.git
+
+[sqldict]
+checkout = git clone git@gitlab.com:kalilinux/packages/sqldict.git
+
+[sqlninja]
+checkout = git clone git@gitlab.com:kalilinux/packages/sqlninja.git
+
+[sqlsus]
+checkout = git clone git@gitlab.com:kalilinux/packages/sqlsus.git
+
+[sslcaudit]
+checkout = git clone git@gitlab.com:kalilinux/packages/sslcaudit.git
+
+[sslscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/sslscan.git
+
+[sslstrip]
+checkout = git clone git@gitlab.com:kalilinux/packages/sslstrip.git
+
+[sslyze]
+checkout = git clone git@gitlab.com:kalilinux/packages/sslyze.git
+
+[sublist3r]
+checkout = git clone git@gitlab.com:kalilinux/packages/sublist3r.git
+
+[teamsploit]
+checkout = git clone git@gitlab.com:kalilinux/packages/teamsploit.git
+
+[tftpd32]
+checkout = git clone git@gitlab.com:kalilinux/packages/tftpd32.git
+
+[thc-pptp-bruter]
+checkout = git clone git@gitlab.com:kalilinux/packages/thc-pptp-bruter.git
+
+[thc-ssl-dos]
+checkout = git clone git@gitlab.com:kalilinux/packages/thc-ssl-dos.git
+
+[theharvester]
+checkout = git clone git@gitlab.com:kalilinux/packages/theharvester.git
+
+[tinfoleak]
+checkout = git clone git@gitlab.com:kalilinux/packages/tinfoleak.git
+
+[tls-parser]
+checkout = git clone git@gitlab.com:kalilinux/packages/tls-parser.git
+
+[tlssled]
+checkout = git clone git@gitlab.com:kalilinux/packages/tlssled.git
+
+[tnscmd10g]
+checkout = git clone git@gitlab.com:kalilinux/packages/tnscmd10g.git
+
+[travispy]
+checkout = git clone git@gitlab.com:kalilinux/packages/travispy.git
+
+[truecrack]
+checkout = git clone git@gitlab.com:kalilinux/packages/truecrack.git
+
+[tundeep]
+checkout = git clone git@gitlab.com:kalilinux/packages/tundeep.git
+
+[twofi]
+checkout = git clone git@gitlab.com:kalilinux/packages/twofi.git
+
+[u3-pwn]
+checkout = git clone git@gitlab.com:kalilinux/packages/u3-pwn.git
+
+[ua-tester]
+checkout = git clone git@gitlab.com:kalilinux/packages/ua-tester.git
+
+[uhd-images]
+checkout = git clone git@gitlab.com:kalilinux/packages/uhd-images.git
+
+[unicorn-magic]
+checkout = git clone git@gitlab.com:kalilinux/packages/unicorn-magic.git
+
+[unicornscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/unicornscan.git
+
+[uniscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/uniscan.git
+
+[unix-privesc-check]
+checkout = git clone git@gitlab.com:kalilinux/packages/unix-privesc-check.git
+
+[urlcrazy]
+checkout = git clone git@gitlab.com:kalilinux/packages/urlcrazy.git
+
+[veil]
+checkout = git clone git@gitlab.com:kalilinux/packages/veil.git
+
+[vfeed]
+checkout = git clone git@gitlab.com:kalilinux/packages/vfeed.git
+
+[voiphopper]
+checkout = git clone git@gitlab.com:kalilinux/packages/voiphopper.git
+
+[watobo]
+checkout = git clone git@gitlab.com:kalilinux/packages/watobo.git
+
+[wce]
+checkout = git clone git@gitlab.com:kalilinux/packages/wce.git
+
+[webacoo]
+checkout = git clone git@gitlab.com:kalilinux/packages/webacoo.git
+
+[webhandler]
+checkout = git clone git@gitlab.com:kalilinux/packages/webhandler.git
+
+[webscarab]
+checkout = git clone git@gitlab.com:kalilinux/packages/webscarab.git
+
+[webshells]
+checkout = git clone git@gitlab.com:kalilinux/packages/webshells.git
+
+[wgetpaste]
+checkout = git clone git@gitlab.com:kalilinux/packages/wgetpaste.git
+
+[wifi-honey]
+checkout = git clone git@gitlab.com:kalilinux/packages/wifi-honey.git
+
+[wifiphisher]
+checkout = git clone git@gitlab.com:kalilinux/packages/wifiphisher.git
+
+[wifitap]
+checkout = git clone git@gitlab.com:kalilinux/packages/wifitap.git
+
+[windows-binaries]
+checkout = git clone git@gitlab.com:kalilinux/packages/windows-binaries.git
+
+[windows-privesc-check]
+checkout = git clone git@gitlab.com:kalilinux/packages/windows-privesc-check.git
+
+[wine-python-2.7]
+checkout = git clone git@gitlab.com:kalilinux/packages/wine-python-2.7.git
+
+[winexe]
+checkout = git clone git@gitlab.com:kalilinux/packages/winexe.git
+
+[wmi]
+checkout = git clone git@gitlab.com:kalilinux/packages/wmi.git
+
+[wmis]
+checkout = git clone git@gitlab.com:kalilinux/packages/wmis.git
+
+[wol-e]
+checkout = git clone git@gitlab.com:kalilinux/packages/wol-e.git
+
+[wordlists]
+checkout = git clone git@gitlab.com:kalilinux/packages/wordlists.git
+
+[wpscan]
+checkout = git clone git@gitlab.com:kalilinux/packages/wpscan.git
+
+[xplico]
+checkout = git clone git@gitlab.com:kalilinux/packages/xplico.git
+
+[xspy]
+checkout = git clone git@gitlab.com:kalilinux/packages/xspy.git
+
+[xsser]
+checkout = git clone git@gitlab.com:kalilinux/packages/xsser.git
+
+[zaproxy]
+checkout = git clone git@gitlab.com:kalilinux/packages/zaproxy.git
