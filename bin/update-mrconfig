@@ -5,6 +5,9 @@ projects=$(salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --gr
 cat >mrconfig <<END
 [DEFAULT]
 jobs = 4
+# Ignore svn/cvs metadata
+svn_test = false
+cvs_test = false
 END
 
 for project in $projects; do

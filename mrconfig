@@ -1,5 +1,8 @@
 [DEFAULT]
 jobs = 4
+# Ignore svn/cvs metadata
+svn_test = false
+cvs_test = false
 
 [0trace]
 checkout = git clone git@gitlab.com:kalilinux/packages/0trace.git
