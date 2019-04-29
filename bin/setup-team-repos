@@ -1,40 +1,41 @@
 #!/bin/sh
 
-team_repo=$(dirname $0)/..
+team_repo=$( dirname $0 )/..
 target_dir=$1
-if [ -z "$target_dir" ]; then
-    target_dir=$(realpath $team_repo/..)
+
+if [ -z "${target_dir}" ]; then
+  target_dir=$( realpath ${team_repo}/.. )
 fi
-target_dir=$(realpath $target_dir)
+target_dir=$( realpath ${target_dir} )
 
 if ! dpkg -s mr >/dev/null 2>/dev/null && ! dpkg -s myrepos >/dev/null 2>/dev/null ; then
-    echo "Please 'apt install mr' before running $0." >&2
-    exit 1
+  echo "Please 'apt install mr' before running $0." >&2
+  exit 1
 fi
 
 confirm_to_continue() {
-    echo -n "Shall I proceed? [Yn] "
-    read reply
-    case "$reply" in
-	[Yy]|"")
-	    ;;
-	*)
-	    echo "Cancelling operation."
-	    exit 0
-	    ;;
-    esac
+  echo -n "Shall I proceed? [Yn] "
+  read reply
+  case "$reply" in
+  [Yy]|"")
+    ;;
+  *)
+    echo "Cancelling operation."
+    exit 0
+    ;;
+  esac
 }
 
-echo "I will setup $target_dir/.mrconfig to easily checkout all repositories."
+echo "I will setup '${target_dir}/.mrconfig' to easily checkout all repositories."
 confirm_to_continue
 
-cp $team_repo/mrconfig $target_dir/.mrconfig
-if [ ! -e ~/.mrtrust ] || ! grep -q "$target_dir/.mrconfig" ~/.mrtrust; then
-    echo "$target_dir/.mrconfig" >>~/.mrtrust
+cp ${team_repo}/mrconfig ${target_dir}/.mrconfig
+if [ ! -e ~/.mrtrust ] || ! grep -q "${target_dir}/.mrconfig" ~/.mrtrust; then
+  echo "${target_dir}/.mrconfig" >>~/.mrtrust
 fi
 
 echo "I will run 'mr --force checkout' to clone all repositories."
 confirm_to_continue
 
-cd $target_dir
+cd ${target_dir}/
 mr --force checkout
