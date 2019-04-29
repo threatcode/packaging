@@ -7,7 +7,7 @@ if [ -z "$target_dir" ]; then
 fi
 target_dir=$(realpath $target_dir)
 
-if ! dpkg -s mr >/dev/null 2>/dev/null; then
+if ! dpkg -s mr >/dev/null 2>/dev/null && ! dpkg -s myrepos >/dev/null 2>/dev/null ; then
     echo "Please 'apt install mr' before running $0." >&2
     exit 1
 fi
