@@ -1,19 +1,20 @@
 #!/bin/sh
 
-projects=$(salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ { print $2 }' | sort)
+## https://gitlab.com/kalilinux/packages
+projects=$( salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ { print $2 }' | sort )
 
-cat >mrconfig <<END
+cat <<EOF>mrconfig
 [DEFAULT]
 jobs = 4
 # Ignore svn/cvs metadata
 svn_test = false
 cvs_test = false
-END
+EOF
 
-for project in $projects; do
-    cat >>mrconfig <<END
+for project in ${projects}; do
+    cat <<EOF>>mrconfig
 
 [$project]
 checkout = git clone git@gitlab.com:kalilinux/packages/${project}.git
-END
+EOF
 done

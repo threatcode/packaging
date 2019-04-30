@@ -40,4 +40,4 @@ echo "[>] I will run 'mr --force checkout' to clone all repositories."
 confirm_to_continue
 
 cd ${target_dir}/
-mr --force checkout
+mr --force checkout --verbose --stats
