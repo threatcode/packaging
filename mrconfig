@@ -457,6 +457,12 @@ checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-bettercap-g
 [golang-github-bettercap-readline]
 checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-bettercap-readline.git
 
+[golang-github-bettercap-recording]
+checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-bettercap-recording.git
+
+[golang-github-evilsocket-islazy]
+checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-evilsocket-islazy.git
+
 [golang-github-mgutz-logxi]
 checkout = git clone git@gitlab.com:kalilinux/packages/golang-github-mgutz-logxi.git
 
@@ -760,6 +766,15 @@ checkout = git clone git@gitlab.com:kalilinux/packages/ollydbg.git
 [openvas]
 checkout = git clone git@gitlab.com:kalilinux/packages/openvas.git
 
+[oracle-instantclient-basic]
+checkout = git clone git@gitlab.com:kalilinux/packages/oracle-instantclient-basic.git
+
+[oracle-instantclient-devel]
+checkout = git clone git@gitlab.com:kalilinux/packages/oracle-instantclient-devel.git
+
+[oracle-instantclient-sqlplus]
+checkout = git clone git@gitlab.com:kalilinux/packages/oracle-instantclient-sqlplus.git
+
 [oscanner]
 checkout = git clone git@gitlab.com:kalilinux/packages/oscanner.git
 
@@ -814,8 +829,14 @@ checkout = git clone git@gitlab.com:kalilinux/packages/plecost.git
 [polenum]
 checkout = git clone git@gitlab.com:kalilinux/packages/polenum.git
 
+[powercat]
+checkout = git clone git@gitlab.com:kalilinux/packages/powercat.git
+
 [powerfuzzer]
 checkout = git clone git@gitlab.com:kalilinux/packages/powerfuzzer.git
+
+[powershell]
+checkout = git clone git@gitlab.com:kalilinux/packages/powershell.git
 
 [powersploit]
 checkout = git clone git@gitlab.com:kalilinux/packages/powersploit.git
@@ -858,6 +879,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/pyinstaller.git
 
 [pylibemu]
 checkout = git clone git@gitlab.com:kalilinux/packages/pylibemu.git
+
+[pyminifier]
+checkout = git clone git@gitlab.com:kalilinux/packages/pyminifier.git
 
 [pyrit-opencl]
 checkout = git clone git@gitlab.com:kalilinux/packages/pyrit-opencl.git
@@ -907,8 +931,23 @@ checkout = git clone git@gitlab.com:kalilinux/packages/python-faraday.git
 [python-filebytes]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-filebytes.git
 
+[python-filedepot]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-filedepot.git
+
+[python-filteralchemy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-filteralchemy.git
+
+[python-flask-classful]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-flask-classful.git
+
+[python-flask-session]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-flask-session.git
+
 [python-ftputil]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-ftputil.git
+
+[python-graphene]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-graphene.git
 
 [python-graphene-sqlalchemy]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-graphene-sqlalchemy.git
@@ -925,6 +964,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/python-harparser.git
 [python-httpreplay]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-httpreplay.git
 
+[python-iptools]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-iptools.git
+
 [python-ipwhois]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-ipwhois.git
 
@@ -937,11 +979,20 @@ checkout = git clone git@gitlab.com:kalilinux/packages/python-ldapdomaindump.git
 [python-magic-ahupp]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-magic-ahupp.git
 
+[python-marshmallow-sqlalchemy]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-marshmallow-sqlalchemy.git
+
+[python-ming]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-ming.git
+
 [python-mockito]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-mockito.git
 
 [python-netfilterqueue]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-netfilterqueue.git
+
+[python-nplusone]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-nplusone.git
 
 [python-oauth2]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-oauth2.git
@@ -994,6 +1045,12 @@ checkout = git clone git@gitlab.com:kalilinux/packages/python-rx.git
 [python-sflock]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-sflock.git
 
+[python-speaklater]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-speaklater.git
+
+[python-sqlalchemy-schemadisplay]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-sqlalchemy-schemadisplay.git
+
 [python-stopit]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-stopit.git
 
@@ -1032,6 +1089,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/python-webargs.git
 
 [python-wsproto]
 checkout = git clone git@gitlab.com:kalilinux/packages/python-wsproto.git
+
+[python-zlib-wrapper]
+checkout = git clone git@gitlab.com:kalilinux/packages/python-zlib-wrapper.git
 
 [pyuserinput]
 checkout = git clone git@gitlab.com:kalilinux/packages/pyuserinput.git
@@ -1177,17 +1237,11 @@ checkout = git clone git@gitlab.com:kalilinux/packages/ruby-plist4r.git
 [ruby-ponder]
 checkout = git clone git@gitlab.com:kalilinux/packages/ruby-ponder.git
 
-[ruby-progressbar]
-checkout = git clone git@gitlab.com:kalilinux/packages/ruby-progressbar.git
-
 [ruby-qr4r]
 checkout = git clone git@gitlab.com:kalilinux/packages/ruby-qr4r.git
 
 [ruby-rubydns]
 checkout = git clone git@gitlab.com:kalilinux/packages/ruby-rubydns.git
-
-[ruby-ruby-progressbar]
-checkout = git clone git@gitlab.com:kalilinux/packages/ruby-ruby-progressbar.git
 
 [ruby-rushover]
 checkout = git clone git@gitlab.com:kalilinux/packages/ruby-rushover.git
@@ -1422,6 +1476,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/wordlists.git
 
 [wpscan]
 checkout = git clone git@gitlab.com:kalilinux/packages/wpscan.git
+
+[xlutils]
+checkout = git clone git@gitlab.com:kalilinux/packages/xlutils.git
 
 [xplico]
 checkout = git clone git@gitlab.com:kalilinux/packages/xplico.git
