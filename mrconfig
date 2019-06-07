@@ -145,6 +145,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/cryptcat.git
 [cryptsetup]
 checkout = git clone git@gitlab.com:kalilinux/packages/cryptsetup.git
 
+[cryptsetup-nuke-password]
+checkout = git clone git@gitlab.com:kalilinux/packages/cryptsetup-nuke-password.git
+
 [cuckoo]
 checkout = git clone git@gitlab.com:kalilinux/packages/cuckoo.git
 
@@ -796,8 +799,14 @@ checkout = git clone git@gitlab.com:kalilinux/packages/paros.git
 [parsero]
 checkout = git clone git@gitlab.com:kalilinux/packages/parsero.git
 
+[partman-auto]
+checkout = git clone git@gitlab.com:kalilinux/packages/partman-auto.git
+
 [passing-the-hash]
 checkout = git clone git@gitlab.com:kalilinux/packages/passing-the-hash.git
+
+[payloadsallthethings]
+checkout = git clone git@gitlab.com:kalilinux/packages/payloadsallthethings.git
 
 [pdfbook]
 checkout = git clone git@gitlab.com:kalilinux/packages/pdfbook.git
@@ -837,6 +846,9 @@ checkout = git clone git@gitlab.com:kalilinux/packages/powerfuzzer.git
 
 [powershell]
 checkout = git clone git@gitlab.com:kalilinux/packages/powershell.git
+
+[powershell-empire]
+checkout = git clone git@gitlab.com:kalilinux/packages/powershell-empire.git
 
 [powersploit]
 checkout = git clone git@gitlab.com:kalilinux/packages/powersploit.git
