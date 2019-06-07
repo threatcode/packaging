@@ -6,12 +6,13 @@ source=$( basename $PWD )
 updated=false
 
 
+
+# Maintainer
 if grep -q -E "Maintainer: .*(kali|offensive-security|hertzog|sophie@freexian)" debian/control; then
   sed -i -e "s|^Maintainer: .*|Maintainer: Kali Developers <devel@kali.org>|i" debian/control
 else
   sed -i -e "s|^Maintainer: \(.*\)|XSBC-Original-Maintainer: \1\nMaintainer: Kali Developers <devel@kali.org>|i" debian/control
 fi
-
 
 if ! git diff --quiet; then
   git commit -q -a -m "Update Maintainer field"
@@ -19,11 +20,12 @@ if ! git diff --quiet; then
 fi
 
 
+
+# Vcs-*
 sed -i \
  -e "s|^Vcs-Git: .*|Vcs-Git: https://gitlab.com/kalilinux/packages/$source.git|i" \
  -e "s|^Vcs-Browser: .*|Vcs-Browser: https://gitlab.com/kalilinux/packages/$source|i" \
  debian/control
-
 
 if ! git diff --quiet; then
   git commit -q -a -m "Update Vcs-* fields for the move to gitlab.com"
@@ -31,6 +33,23 @@ if ! git diff --quiet; then
 fi
 
 
+
+# Homepage
+sed -i \
+ -e "s|^Homepage: http://www.kali.org|Homepage: https://www.kali.org|i" \
+ debian/control
+
+sed -i \
+ -e "s|^Source: http://www.kali.org|Source: https://www.kali.org|i" \
+ debian/copyright
+
+if ! git diff --quiet; then
+  git commit -q -a -m "Update Kali's homepage to HTTPS"
+  updated=true
+fi
+
+
+# Push if altered
 if ! git diff --quiet origin/kali/master..HEAD; then
   git push -q
 fi
