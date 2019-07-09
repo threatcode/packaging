@@ -12,9 +12,9 @@ cvs_test = false
 EOF
 
 for project in ${projects}; do
-    cat <<EOF>>mrconfig
+  cat <<EOF>>mrconfig
 
 [$project]
-checkout = git clone git@gitlab.com:kalilinux/packages/${project}.git
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/${project}.git
 EOF
 done
