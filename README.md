@@ -36,3 +36,14 @@ A example todo all the packages (using `setup-team-repos`):
 ```
 ~/kali/packages$ for x in $(ls -1); do cd ${x}; ../../tools/packaging/bin/update-control; cd ../; done
 ```
+
+## file-issues
+
+If you have to file the same issue agains a large number of GitLab
+projects, you can use this script. Example use:
+$ apt install python3-gitlab gitlab-cli
+$ bin/file-issues kalilinux/packages/kismet data/issue-details.yml
+
+You need to have configured your API token in ~/.python-gitlab.cfg
+following the template provided in
+/usr/share/doc/gitlab-cli/examples/python-gitlab.cfg:

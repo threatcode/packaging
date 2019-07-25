@@ -1,0 +1,80 @@
+#!/usr/bin/python3
+
+"""File GitLab issues through the API.
+
+This scripts is helpful when you have to file many issues against GitLab
+projects.
+
+You need to have configured your GitLab API token in ~/.python-gitlab.cfg.
+See /usr/share/doc/gitlab-cli/examples/python-gitlab.cfg as an example.
+"""
+
+import argparse
+import sys
+import yaml
+
+import gitlab
+
+
+def parse_yaml(path):
+    with open(path, 'r') as f:
+        try:
+            return yaml.safe_load(f)
+        except Exception as e:
+            raise argparse.ArgumentTypeError(
+                f'{path} is not a valid YAML file') from e
+
+
+def parse_args(args=sys.argv[1:]):
+    """Parse arguments."""
+    parser = argparse.ArgumentParser(
+        description=sys.modules[__name__].__doc__)
+
+    parser.add_argument(
+        '--gitlab-instance', type=str, default=None,
+        help="Name of the GitLab instance in the configuration file")
+    parser.add_argument('project_path', type=str,
+                        help='Path of the GitLab project')
+    parser.add_argument('issue_details', type=parse_yaml,
+                        help='YAML file with desired issue attributes')
+
+    return parser.parse_args(args)
+
+
+options = parse_args()
+
+# We use the default entry from ~/.python-gitlab.cfg
+gl = gitlab.Gitlab.from_config(options.gitlab_instance)
+
+project = gl.projects.get(options.project_path)
+
+options.issue_details['title'] = options.issue_details['title'].replace(
+    '@project@', project.path)
+options.issue_details['description'] = \
+    options.issue_details['description'].replace('@project@', project.path)
+
+issue = None
+if 'labels' in options.issue_details:
+    label = options.issue_details['labels'][0]
+    issues = project.issues.list(label=label)
+    if len(issues) > 0:
+        issue = issues[0]
+
+links = None
+if 'links' in options.issue_details:
+    links = options.issue_details['links']
+    options.issue_details.pop('links')
+
+if issue is None:
+    issue = project.issues.create(options.issue_details)
+
+if links:
+    for link in links:
+        link = link.replace('https://gitlab.com/', '')
+        target_project_path, target_issue_id = link.split('/issues/')
+        target_project = gl.projects.get(target_project_path)
+        target_issue = target_project.issues.get(target_issue_id)
+        issue.links.create({
+            'target_project_id': target_issue.project_id,
+            'target_issue_iid': target_issue.iid,
+        })
