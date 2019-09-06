@@ -1,7 +1,29 @@
 # Helper tools for Kali packagers
 
+Helper scripts to manage the huge set of repositories used for Kali packages.
 
-## setup-team-repos
+## Setup
+
+To make use of some of the scripts, you need to setup a "Personal Access
+Token" granting access to the "api". You do that here:
+https://gitlab.com/profile/personal_access_tokens
+
+Store your key in the ".gitlab-token" file with this command (replace XXX
+with the real token):
+
+```
+$ echo "SALSA_TOKEN='XXXX'" >.gitlab-token
+```
+
+You also need `curl` and the `salsa` tool (from the `devscripts` package):
+```
+$ apt install curl devscripts
+```
+
+## Available tools
+
+### setup-team-repos: checkout all repositories in a dedicated directory
+
 How to checkout all Kali packages at once, assuming that the current
 directory is the checkout of this repository:
 
@@ -26,18 +48,46 @@ just to ensure that it is up-to-date:
 $ ./bin/update-mrconfig
 ```
 
-- - -
+### configure-packages: configure git packaging repositories
 
-## update-control
+This script makes use of the GitLab API to setup the email notifications,
+standardize the description, ensure kali/master is the default branch,
+enable the merge requests and the issues, and configure the CI path
+to debian/kali-ci.yml.
+
+It is a wrapper around Debian's `salsa` tool (provided by devscripts).
+
+To verify all repositories from the packages sub-group and reconfigure those
+which are not consistent with our rules:
+```
+$ ./bin/configure-packages --all
+```
+
+To configure a new repository in the packages sub-group:
+```
+$ ./bin/configure-packages zaproxy
+```
+
+### archive-package: disable an unused git repository
+
+To archive an obsolete project in the packages sub-group:
+```
+$ ./bin/archive-package ruby-librex
+```
+
+After having used that command you should update the list of repositories
+with `bin/update-mrconfig`.
+
+## auto-update: apply common changes for all Kali source packages
 
 Inside a package directory, run `bin/auto-update` to apply many Kali
 specific customizations:
 - updating the Maintainer field to the official value
-- adding/updating Vcs-Git and Vcs-Browser fields
+- updating Vcs-Git and Vcs-Browser fields
 - adding/updating debian/gbp.conf
 - adding/updating debian/kali-ci.yaml
 
-## file-issues
+## file-issues: create many gitlab issues
 
 If you have to file the same issue agains a large number of GitLab
 projects, you can use this script. Example use:

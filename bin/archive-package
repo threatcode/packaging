@@ -1,0 +1,27 @@
+#!/bin/sh
+
+check_return_code() {
+    if [ $? -eq 0 ]; then
+        echo "Project kalilinux/packages/$PACKAGE archived."
+    else
+        echo "Something went wrong with archival of kalilinux/packages/$PACKAGE!"
+        exit 1
+    fi
+}
+
+source .gitlab-token
+
+if [ -z "$SALSA_TOKEN" ]; then
+    echo "ERROR: No token configured in .gitlab-token" >&2
+    exit 1
+fi
+
+PACKAGE=$1
+
+if [ -z "$PACKAGE" ]; then
+    echo "ERROR: No package indicated on the command line" >&2
+    exit 1
+fi
+
+curl --silent --show-error --request POST --header "PRIVATE-TOKEN: $SALSA_TOKEN" "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F$PACKAGE/archive" -o /dev/null
+check_return_code

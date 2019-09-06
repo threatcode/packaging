@@ -1,0 +1,3 @@
+#!/bin/sh
+
+salsa --conf-file ./salsa/auth.conf --conf-file +./salsa/packages.conf update_safe ${1:---all} --verbose
