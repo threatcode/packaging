@@ -30,12 +30,12 @@ $ ./bin/update-mrconfig
 
 ## update-control
 
-Inside a package directory, run `./bin/update-control`.
-A example todo all the packages (using `setup-team-repos`):
-
-```
-~/kali/packages$ for x in $(ls -1); do cd ${x}; ../../tools/packaging/bin/update-control; cd ../; done
-```
+Inside a package directory, run `bin/auto-update` to apply many Kali
+specific customizations:
+- updating the Maintainer field to the official value
+- adding/updating Vcs-Git and Vcs-Browser fields
+- adding/updating debian/gbp.conf
+- adding/updating debian/kali-ci.yaml
 
 ## file-issues
 

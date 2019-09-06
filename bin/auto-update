@@ -1,0 +1,78 @@
+#!/bin/sh
+
+set -e
+
+# Global variables
+AUTO_UPDATE_DIR=$(dirname $0)/../auto-update.d
+
+# Basic argument parsing
+opt_push=1
+opt_commit=1
+opt_verbose=1
+while [ $# -gt 0 ]; do
+    case "$1" in
+	--no-push) opt_push=0 ;;
+	--push)    opt_push=1 ;;
+	--no-commit) opt_commit=0 ;;
+	--commit)    opt_commit=1 ;;
+	--quiet)   opt_verbose=0 ;;
+	--verbose) opt_verbose=$(($opt_verbose + 1)) ;;
+	*)
+	    echo "ERROR: unsupported option: $1"
+	    exit 1
+	    ;;
+    esac
+    shift
+done
+
+if [ ! -d .git ] || [ ! -d debian ]; then
+    echo "ERROR: $0 needs to be called within a git packaging repository"
+    echo "Either the .git or the debian directory are missing."
+    exit 1
+fi
+
+# How to use:
+# record_change "commit message" [file-to-commit...]
+record_change() {
+    local message="$1"
+    shift
+
+    git add "${@:-.}"
+    if ! git diff --quiet HEAD -- "$@" >/dev/null; then
+	if [ "$opt_commit" = "1" ]; then
+	    git commit -q -m "$message" "$@"
+	    if [ $opt_verbose -gt 0 ]; then
+		echo "** NEW CHANGE: $message **"
+	    fi
+	    if [ $opt_verbose -gt 1 ]; then
+		echo ""
+		git show HEAD
+		echo ""
+	    fi
+	fi
+	_changed=1
+    fi
+}
+
+# must be called with data on stdin, e.g. create_if_missing foo <<END
+create_if_missing() {
+    local path="$1"
+
+    if [ ! -e "$path" ]; then
+	cat >"$path"
+	git add "$path"
+    else
+	cat >/dev/null
+    fi
+}
+
+# Track whether we have made changes
+_changed=0
+
+for script in $AUTO_UPDATE_DIR/*.sh; do
+    . $script || true
+done
+
+if [ "$_changed" = "1" ] && [ "$opt_push" = "1" ] && [ "$opt_commit" = "1" ]; then
+    git push -q
+fi
