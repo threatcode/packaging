@@ -13,6 +13,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [amap]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/amap.git
 
+[amass]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/amass.git
+
 [android-sdk]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/android-sdk.git
 
@@ -60,6 +63,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [bettercap-caplets]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bettercap-caplets.git
+
+[bettercap-ui]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bettercap-ui.git
 
 [blindelephant]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/blindelephant.git
@@ -304,9 +310,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [fruitywifi-module-autostart]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-autostart.git
 
-[fruitywifi-module-bdfproxy]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-bdfproxy.git
-
 [fruitywifi-module-beef]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-beef.git
 
@@ -331,20 +334,11 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [fruitywifi-module-ettercap]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-ettercap.git
 
-[fruitywifi-module-fruitydns]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-fruitydns.git
-
-[fruitywifi-module-fruityproxy]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-fruityproxy.git
-
 [fruitywifi-module-hopper]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-hopper.git
 
 [fruitywifi-module-karma]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-karma.git
-
-[fruitywifi-module-kismet]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-kismet.git
 
 [fruitywifi-module-mana]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fruitywifi-module-mana.git
@@ -505,9 +499,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [hb-honeypot]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hb-honeypot.git
 
-[hcxdumptool]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hcxdumptool.git
-
 [hcxtools]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hcxtools.git
 
@@ -640,6 +631,12 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [king-phisher]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/king-phisher.git
 
+[kismet]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kismet.git
+
+[kismet-docs]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kismet-docs.git
+
 [laudanum]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/laudanum.git
 
@@ -696,12 +693,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [miranda]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/miranda.git
-
-[mitmf]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmf.git
-
-[mitmflib]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmflib.git
 
 [msfpc]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/msfpc.git
@@ -808,9 +799,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [payloadsallthethings]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/payloadsallthethings.git
 
-[pdfbook]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pdfbook.git
-
 [pdfid]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pdfid.git
 
@@ -916,9 +904,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [python-clamd]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-clamd.git
 
-[python-clearbit]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-clearbit.git
-
 [python-cx-oracle]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cx-oracle.git
 
@@ -979,11 +964,14 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [python-ipwhois]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-ipwhois.git
 
-[python-json2html]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-json2html.git
+[python-kismet-external]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-kismet-external.git
 
 [python-ldapdomaindump]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-ldapdomaindump.git
+
+[python-lml]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-lml.git
 
 [python-magic-ahupp]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-magic-ahupp.git
@@ -1008,9 +996,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [python-oletools]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-oletools.git
-
-[python-piplapis]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-piplapis.git
 
 [python-promise]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-promise.git
@@ -1059,12 +1044,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [python-sqlalchemy-schemadisplay]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-sqlalchemy-schemadisplay.git
-
-[python-stopit]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-stopit.git
-
-[python-symmetric-jsonrpc]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-symmetric-jsonrpc.git
 
 [python-tld]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-tld.git
@@ -1201,8 +1180,8 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [ruby-glu]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-glu.git
 
-[ruby-librex]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-librex.git
+[ruby-glut]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-glut.git
 
 [ruby-maxmind-db]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-maxmind-db.git
@@ -1230,6 +1209,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [ruby-nfqueue]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-nfqueue.git
+
+[ruby-opengl]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-opengl.git
 
 [ruby-opt-parse-validator]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ruby-opt-parse-validator.git
