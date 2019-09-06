@@ -1,6 +1,6 @@
 # This file is sourced by bin/auto-update
 
-SOURCE=$(awk '/Source:/ {print $2}' debian/control)
+SOURCE=$(awk '/^Source:/ {print $2}' debian/control)
 CURDIR_NAME=$(basename $PWD)
 
 if [ "$CURDIR_NAME" != "$SOURCE" ]; then
@@ -26,7 +26,10 @@ record_change "Update Vcs-* fields" debian/control
 sed -i \
     -e "s|^Homepage: http://www.kali.org|Homepage: https://www.kali.org|i" \
     debian/control
-sed -i \
-    -e "s|^Source: http://www.kali.org|Source: https://www.kali.org|i" \
-    debian/copyright
-record_change "Use HTTPS url for www.kali.org" debian/control
+if [ -e debian/copyright ]; then
+    sed -i \
+	-e "s|^Source: http://www.kali.org|Source: https://www.kali.org|i" \
+	debian/copyright
+    extra=debian/copyright
+fi
+record_change "Use HTTPS url for www.kali.org" debian/control $extra

@@ -3,7 +3,7 @@
 gbp_conf=debian/gbp.conf
 
 # Add a debian/gbp.conf file
-if [ ! -e $gbp_conf ] || ! grep -qE 'kali|debian-tag' $gbp_conf; then
+if [ ! -e $gbp_conf ] || ! grep -q kali $gbp_conf || ! grep -q debian-tag $gbp_conf; then
     cat >$gbp_conf <<END
 [DEFAULT]
 debian-branch = kali/master
