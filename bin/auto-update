@@ -6,7 +6,7 @@ set -e
 AUTO_UPDATE_DIR=$(dirname $0)/../auto-update.d
 
 # Basic argument parsing
-opt_push=1
+opt_push=0
 opt_commit=1
 opt_verbose=1
 while [ $# -gt 0 ]; do
