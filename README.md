@@ -80,8 +80,9 @@ with `bin/update-mrconfig`.
 
 ## auto-update: apply common changes for all Kali source packages
 
-Inside a package directory, run `bin/auto-update` to apply many Kali
-specific customizations:
+Assuming that `$PACKAGING_DIR` contains the path to this git repository,
+once inside a package directory, run `$PACKAGING_DIR/bin/auto-update` to
+apply many Kali specific customizations:
 - updating the Maintainer field to the official value
 - updating Vcs-Git and Vcs-Browser fields
 - adding/updating debian/gbp.conf

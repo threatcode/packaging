@@ -1,3 +1,9 @@
 #!/bin/sh
 
+if [ ! -e ./salsa/auth.conf ] || [ ! -e ./salsa/packages.conf ]; then
+    echo "ERROR: You don't seem to be in the correct directory."
+    echo "Run this tool from the top-level directory as bin/configure-packages"
+    exit 1
+fi
+
 salsa --conf-file ./salsa/auth.conf --conf-file +./salsa/packages.conf update_safe ${1:---all} --verbose
