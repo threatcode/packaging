@@ -8,23 +8,32 @@ To make use of some of the scripts, you need to setup a "Personal Access
 Token" granting access to the "api". You do that here:
 https://gitlab.com/profile/personal_access_tokens
 
-Store your key in the ".gitlab-token" file with this command (replace XXX
+Store your key in the ".gitlab-token" file (within this folder) with this command (replace XXX
 with the real token):
 
 ```
-$ echo "SALSA_TOKEN='XXXX'" >.gitlab-token
+$ echo "SALSA_TOKEN='XXXX'" > .gitlab-token
 ```
 
 You also need `curl` and the `salsa` tool (from the `devscripts` package):
+
 ```
-$ apt install curl devscripts
+$ apt -y install curl devscripts
 ```
 
 ## Available tools
 
 ### setup-team-repos: checkout all repositories in a dedicated directory
 
-How to checkout all Kali packages at once, assuming that the current
+You might want to update the `mrconfig` file listing all repositories
+just to ensure that it is up-to-date:
+
+```
+$ ./bin/update-mrconfig
+```
+- - -
+
+To checkout all Kali packages at once, assuming that the current
 directory is the checkout of this repository:
 
 ```
@@ -39,13 +48,6 @@ Cloning into '0trace'...
 
 mr checkout: finished (477 ok; 0 failed)
 $
-```
-
-You might want to update the `mrconfig` file listing all repositories
-just to ensure that it is up-to-date:
-
-```
-$ ./bin/update-mrconfig
 ```
 
 ### configure-packages: configure git packaging repositories
