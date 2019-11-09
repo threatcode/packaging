@@ -36,7 +36,7 @@ if [ ! -e ~/.mrtrust ] || ! grep -q "${target_dir}/.mrconfig" ~/.mrtrust; then
   echo "${target_dir}/.mrconfig" >>~/.mrtrust
 fi
 
-echo "[>] I will run 'mr --force checkout' to clone all repositories."
+echo "[>] I will run 'mr --force checkout' to clone all repositories (in ${target_dir})."
 confirm_to_continue
 
 cd ${target_dir}/
