@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Usage: bin/unprotect [<package> ...]
+# Will reset branch protection to allow developers to push and merge
+
+## https://gitlab.com/kalilinux/packages
+if [ -n "$1" ]; then
+    projects="$@"
+else
+    projects=$(salsa --conf-file ./salsa/auth.conf --group-id 5034987 ls | awk '/Name:/ { print $2 }' | sort)
+fi
+
+for project in ${projects}; do
+    echo "Setting branch protection for kalilinux/packages/$project"
+    salsa --conf-file ./salsa/auth.conf --verbose --group-id 5034987 protect_branch $project kali/master no
+    salsa --conf-file ./salsa/auth.conf --verbose --group-id 5034987 protect_branch $project kali/master d d
+    echo ""
+done
