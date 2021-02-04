@@ -6,19 +6,20 @@ Helper scripts to manage the huge set of repositories used for Kali packages.
 
 To make use of some of the scripts, you need to setup a "Personal Access
 Token" granting access to the "api". You do that here:
-https://gitlab.com/profile/personal_access_tokens
+<https://gitlab.com/profile/personal_access_tokens>
 
-Store your key in the ".gitlab-token" file (within this folder) with this command (replace XXX
-with the real token):
+Store your key in the `.gitlab-token` file (within this folder) with this
+command (replace XXX with the real token):
 
 ```
 $ echo "SALSA_TOKEN='XXXX'" > .gitlab-token
 ```
 
-You also need `curl` and the `salsa` tool (from the `devscripts` package):
+You also need `curl`, the `salsa` tool (from the `devscripts` package), `gbp`
+(aka. `git-buildpackage`) and `mr` (aka. `myrepos`).
 
 ```
-$ apt -y install curl devscripts
+$ apt -y install curl devscripts git-buildpackage myrepos
 ```
 
 ## Available tools
