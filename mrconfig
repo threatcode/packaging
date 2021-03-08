@@ -148,6 +148,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [cloud-enum]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cloud-enum.git
 
+[cloudbrute]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cloudbrute.git
+
 [cloudflare-scrape]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cloudflare-scrape.git
 
@@ -301,8 +304,14 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [fern-wifi-cracker]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fern-wifi-cracker.git
 
+[feroxbuster]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/feroxbuster.git
+
 [ferret-sidejack]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ferret-sidejack.git
+
+[ffuf]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ffuf.git
 
 [fierce]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fierce.git
@@ -358,6 +367,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [giskismet]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/giskismet.git
 
+[gitleaks]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gitleaks.git
+
 [globre]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/globre.git
 
@@ -379,6 +391,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [godoh]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/godoh.git
 
+[golang-github-akamensky-argparse]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-akamensky-argparse.git
+
 [golang-github-andrew-d-go-termutil]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-andrew-d-go-termutil.git
 
@@ -394,11 +409,26 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [golang-github-domainr-whoistest]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-domainr-whoistest.git
 
+[golang-github-go-git-go-billy-v5]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-go-git-go-billy-v5.git
+
+[golang-github-go-git-go-git-fixtures-v4]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-go-git-go-git-fixtures-v4.git
+
+[golang-github-go-git-go-git-v5]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-go-git-go-git-v5.git
+
 [golang-github-gobuffalo-packr]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-gobuffalo-packr.git
 
 [golang-github-haccer-available]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-haccer-available.git
+
+[golang-github-hako-durafmt]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-hako-durafmt.git
+
+[golang-github-ipinfo-go-ipinfo]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-ipinfo-go-ipinfo.git
 
 [golang-github-jawher-mow.cli]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jawher-mow.cli.git
@@ -832,6 +862,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [pack]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pack.git
 
+[pacu]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pacu.git
+
 [padbuster]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/padbuster.git
 
@@ -864,6 +897,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [pdfid]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pdfid.git
+
+[peirates]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/peirates.git
 
 [perl-cisco-copyconfig]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/perl-cisco-copyconfig.git
@@ -966,6 +1002,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [pysmb]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pysmb.git
+
+[pyspnego]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyspnego.git
 
 [pytest-factoryboy]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pytest-factoryboy.git
@@ -1497,6 +1536,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [winexe]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/winexe.git
+
+[witnessme]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/witnessme.git
 
 [wmi]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/wmi.git
