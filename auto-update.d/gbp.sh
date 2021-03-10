@@ -18,3 +18,13 @@ multimaint-merge = True
 END
     record_change "Configure git-buildpackage for Kali" $gbp_conf
 fi
+
+if [ -e $gbp_conf ] && grep -q "XSBC-Original-Maintainer:" debian/control && ! grep -q "\[import-dsc\]" $gbp_conf; then
+    cat >>$gbp_conf << END
+
+[import-dsc]
+debian-branch = debian
+debian-tag = debian/%(version)s
+END
+    record_change "Configure gbp import-dsc for a Debian-derived package" $gbp_conf
+fi
