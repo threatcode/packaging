@@ -15,12 +15,15 @@ command (replace XXX with the real token):
 $ echo "SALSA_TOKEN='XXXX'" > .gitlab-token
 ```
 
+You will also need to have configured your API token in: `~/.python-gitlab.cfg`.
+There is a template provided in: `/usr/share/doc/gitlab-cli/examples/python-gitlab.cfg`.
+
 You also need `curl`, the `salsa` tool (from the `devscripts` package), `gbp`
 (aka. `git-buildpackage`) and `mr` (aka. `myrepos`):
 
 ```bash
 $ sudo apt update
-$ sudo apt -y install curl devscripts git-buildpackage myrepos
+$ sudo apt -y install curl devscripts git-buildpackage myrepos   python3-gitlab gitlab-cli
 ```
 
 ### setup-team-repos: Checkout all repositories in a dedicated directory
@@ -39,15 +42,15 @@ directory is the checkout of this repository:
 
 ```bash
 $ ./bin/setup-team-repos ~/kali/packages
-[>] I will setup '/home/g0tmi1k/kali/packages/.mrconfig' to easily checkout all repositories.
+[>] I will setup '/home/user/kali/packages/.mrconfig' to easily checkout all repositories.
 [?] Shall I proceed? [Y/n] y
 [>] I will run 'mr --force checkout' to clone all repositories.
 [?] Shall I proceed? [Y/n] y
-mr checkout: /home/g0tmi1k/kali/packages/0trace
+mr checkout: /home/user/kali/packages/0trace
 Cloning into '0trace'...
+gbp:info: Cloning from 'git@gitlab.com:kalilinux/packages/dpkg.git'
 [...]
-
-mr checkout: finished (477 ok; 0 failed)
+mr checkout: finished (578 ok; 0 failed)
 $
 ```
 
@@ -84,7 +87,7 @@ $ ./bin/archive-package ruby-librex
 ```
 
 After having used that command you should update the list of repositories
-with `bin/update-mrconfig`.
+with `./bin/update-mrconfig`.
 
 ### auto-update: Apply common changes for all Kali source packages
 
@@ -103,10 +106,5 @@ If you have to file the same issue against a large number of GitLab
 projects, you can use this script. Example use:
 
 ```bash
-$ sudo apt -y install python3-gitlab gitlab-cli
-$ bin/file-issues kalilinux/packages/kismet data/issue-details.yml
+$ ./bin/file-issues kalilinux/packages/kismet data/issue-details.yml
 ```
-
-You need to have configured your API token in `~/.python-gitlab.cfg`
-following the template provided in:
-`/usr/share/doc/gitlab-cli/examples/python-gitlab.cfg:`
