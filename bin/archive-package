@@ -23,5 +23,11 @@ if [ -z "$PACKAGE" ]; then
     exit 1
 fi
 
-curl --silent --show-error --request POST --header "PRIVATE-TOKEN: $SALSA_TOKEN" "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F$PACKAGE/archive" -o /dev/null
+curl \
+  --silent \
+  --show-error \
+  --request POST \
+  --header "PRIVATE-TOKEN: $SALSA_TOKEN" \
+  "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F$PACKAGE/archive" \
+  -o /dev/null
 check_return_code
