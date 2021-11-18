@@ -1,10 +1,14 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
-# ./archive-team-repo [<packages-path>] [<archived-path>]
+# Move any archived repos which have been clone locally
+#
+# Usage: ./bin/archive-team-repo [<packages-path>] [<archived-path>]
 # Without argument, will default to:
 #   - packages-path: ./../
 #   - archived-path: ./../archived/
 #
+
+set -e
 
 # Base folder, to locate mrconfig
 repo_dir=$( dirname $0 )/..
