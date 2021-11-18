@@ -1,8 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
-# ./setup-team-repo [<packages-path>]
+# Download every repo
+#
+# Usage: ./bin/setup-team-repo [<packages-path>]
 # Without argument, will default to parent folder ("./../")
 #
+
+set -e
 
 # Base folder, to locate mrconfig
 repo_dir=$( dirname $0 )/..
@@ -24,7 +28,7 @@ confirm_to_continue() {
 
 # Check myrepos is installed
 if ! dpkg -s mr >/dev/null 2>/dev/null && ! dpkg -s myrepos >/dev/null 2>/dev/null; then
-  echo "[-] Please 'apt install mr' before running $0" >&2
+  echo "[-] Please 'sudo apt install mr' before running $0" >&2
   exit 1
 fi
 
@@ -53,4 +57,7 @@ confirm_to_continue
 
 # Clone repos
 cd "${target_dir}/"
-mr --force checkout --verbose --stats
+mr --force \
+   --verbose \
+   --stats \
+   checkout
