@@ -1,4 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env sh
+#
+# Configure local package with Kali's template
+#
+# Usage: ./bin/auto-update [<options>]
+#  --push (default) / --no-push     - Submit changes back to repo
+#  --commit / --no-commit (default) - Stage or commit changes
+#  --quiet / --verbose              - How much output to make
+#
 
 set -e
 
@@ -10,24 +18,24 @@ opt_push=0
 opt_commit=1
 opt_verbose=1
 while [ $# -gt 0 ]; do
-    case "$1" in
-	--no-push) opt_push=0 ;;
-	--push)    opt_push=1 ;;
-	--no-commit) opt_commit=0 ;;
-	--commit)    opt_commit=1 ;;
-	--quiet)   opt_verbose=0 ;;
-	--verbose) opt_verbose=$(($opt_verbose + 1)) ;;
-	*)
-	    echo "ERROR: unsupported option: $1"
-	    exit 1
-	    ;;
+  case "$1" in
+    --no-push)   opt_push=0 ;;
+    --push)      opt_push=1 ;;
+    --no-commit) opt_commit=0 ;;
+    --commit)    opt_commit=1 ;;
+    --quiet)     opt_verbose=0 ;;
+    --verbose)   opt_verbose=$(($opt_verbose + 1)) ;;
+    *)
+      echo "[-] ERROR: unsupported option: $1" >&2
+      exit 1
+      ;;
     esac
     shift
 done
 
 if [ ! -d .git ] || [ ! -d debian ]; then
-    echo "ERROR: $0 needs to be called within a git packaging repository"
-    echo "Either the .git or the debian directory are missing."
+    echo "[-] ERROR: $0 needs to be called within a git packaging repository" >&2
+    echo "[-] Either the .git/ or the debian/ directories are missing" >&2
     exit 1
 fi
 
@@ -39,30 +47,30 @@ record_change() {
 
     git add "${@:-.}"
     if ! git diff --quiet HEAD -- "$@" >/dev/null; then
-	if [ "$opt_commit" = "1" ]; then
-	    git commit -q -m "$message" "$@"
-	    if [ $opt_verbose -gt 0 ]; then
-		echo "** NEW CHANGE: $message **"
-	    fi
-	    if [ $opt_verbose -gt 1 ]; then
-		echo ""
-		git show HEAD
-		echo ""
-	    fi
-	fi
-	_changed=1
+    if [ "$opt_commit" = "1" ]; then
+        git commit -q -m "$message" "$@"
+        if [ $opt_verbose -gt 0 ]; then
+            echo "** NEW CHANGE: $message **"
+        fi
+        if [ $opt_verbose -gt 1 ]; then
+            echo ""
+            git show HEAD
+            echo ""
+        fi
+    fi
+    _changed=1
     fi
 }
 
-# must be called with data on stdin, e.g. create_if_missing foo <<END
+# Must be called with data on stdin, e.g. create_if_missing foo <<END
 create_if_missing() {
     local path="$1"
 
     if [ ! -e "$path" ]; then
-	cat >"$path"
-	git add "$path"
+        cat > "$path"
+        git add "$path"
     else
-	cat >/dev/null
+        cat >/dev/null
     fi
 }
 
@@ -70,7 +78,7 @@ create_if_missing() {
 _changed=0
 
 for script in $AUTO_UPDATE_DIR/*.sh; do
-    . $script || true
+    source $script || true
 done
 
 if [ "$_changed" = "1" ] && [ "$opt_push" = "1" ] && [ "$opt_commit" = "1" ]; then
