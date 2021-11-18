@@ -1,0 +1,63 @@
+#!/bin/sh
+#
+# ./archive-team-repo [<packages-path>] [<archived-path>]
+# Without argument, will default to:
+#   - packages-path: ./../
+#   - archived-path: ./../archived/
+#
+
+# Base folder, to locate mrconfig
+repo_dir=$( dirname $0 )/..
+# Where the checkout packages are
+package_dir=$1
+# Where to move archived packages to
+archive_dir=$2
+
+# Check before doing action
+confirm_to_continue() {
+  read -p "[?] Shall I proceed? [Y/n] " reply
+  case "${reply}" in
+  [Yy]|"")
+    ;;
+  *)
+    echo "[-] Cancelling operation" >&2
+    exit 0
+    ;;
+  esac
+}
+
+# No arguments, use default location
+if [ -z "${package_dir}" ]; then
+  package_dir=$( realpath ${repo_dir}/.. )
+fi
+package_dir=$( realpath ${package_dir} )
+
+# No arguments, use default location
+if [ -z "${archive_dir}" ]; then
+  archive_dir=$( realpath ${repo_dir}/../archive )
+fi
+archive_dir=$( realpath ${archive_dir} )
+
+# Create archive location
+mkdir -p "${archive_dir}/"
+
+# Copy myrepos config
+if [ ! -e "${package_dir}/.mrconfig" ]; then
+  echo "[-] Unable to locate '${package_dir}/.mrconfig'" >&2
+  echo "[-] Please run './bin/setup-team-repos ${package_dir}'" >&2
+  exit 1
+fi
+
+# Feedback about action
+echo "[>] I will compare '${package_dir}/.mrconfig' to '${package_dir}' to see any packages have been archived"
+confirm_to_continue
+
+# Not using while loop, due to nested read
+# Spaces in path name will break loop (should not have any tho)
+for package in $(ls -1 "${package_dir}/"); do
+  if ! grep -q "^\[${package}\]$" "${package_dir}/.mrconfig"; then
+    echo "[>] Move '${package_dir}/${package}' to '${archive_dir}/${package}'?"
+    confirm_to_continue
+    mv "${package_dir}/${package}" "${archive_dir}/${package}"
+  fi
+done
