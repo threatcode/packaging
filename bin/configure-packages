@@ -1,9 +1,20 @@
 #!/bin/sh
 
 if [ ! -e ./salsa/auth.conf ] || [ ! -e ./salsa/packages.conf ]; then
-    echo "ERROR: You don't seem to be in the correct directory."
-    echo "Run this tool from the top-level directory as bin/configure-packages"
+    echo "ERROR: You don't seem to be in the correct directory" >&2
+    echo "Run this tool from the top-level directory as: ./bin/configure-packages" >&2
     exit 1
 fi
 
-salsa --conf-file ./salsa/auth.conf --conf-file +./salsa/packages.conf update_safe ${1:---all} --verbose
+if [ ! -e ./.gitlab-token ]; then
+    echo "ERROR: You are missing ./.gitlab-token" >&2
+    echo "Create: https://gitlab.com/profile/personal_access_tokens" >&2
+    echo "Afterwards: echo \"SALSA_TOKEN='XXX'\" > ./.gitlab-token" >&2
+    exit 1
+fi
+
+salsa \
+  --conf-file ./salsa/auth.conf \
+  --conf-file +./salsa/packages.conf \
+  --verbose \
+  update_safe ${1:---all} \

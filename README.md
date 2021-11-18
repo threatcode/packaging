@@ -12,7 +12,7 @@ Store your key in the `.gitlab-token` file (within this folder) with this
 command (replace XXX with the real token):
 
 ```bash
-$ echo "SALSA_TOKEN='XXXX'" > ./.gitlab-token
+$ echo "SALSA_TOKEN='XXX'" > ./.gitlab-token
 ```
 
 You will also need to have configured your API token in: `~/.python-gitlab.cfg`.
