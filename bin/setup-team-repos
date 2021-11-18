@@ -1,43 +1,56 @@
 #!/bin/sh
+#
+# ./setup-team-repo [<packages-path>]
+# Without argument, will default to parent folder ("./../")
+#
 
-team_repo=$( dirname $0 )/..
+# Base folder, to locate mrconfig
+repo_dir=$( dirname $0 )/..
+# Where to checkout all packages
 target_dir=$1
 
-if [ -z "${target_dir}" ]; then
-  target_dir=$( realpath ${team_repo}/.. )
-fi
-target_dir=$( realpath ${target_dir} )
-
-mkdir -p "${target_dir}"
-
-if ! dpkg -s mr >/dev/null 2>/dev/null && ! dpkg -s myrepos >/dev/null 2>/dev/null ; then
-  echo "[-] Please 'apt install mr' before running $0." >&2
-  exit 1
-fi
-
+# Check before doing action
 confirm_to_continue() {
-  echo -n "[?] Shall I proceed? [Y/n] "
-  read reply
-  case "$reply" in
+  read -p "[?] Shall I proceed? [Y/n] " reply
+  case "${reply}" in
   [Yy]|"")
     ;;
   *)
-    echo "[-] Cancelling operation."
+    echo "[-] Cancelling operation" >&2
     exit 0
     ;;
   esac
 }
 
-echo "[>] I will setup '${target_dir}/.mrconfig' to easily checkout all repositories."
+# Check myrepos is installed
+if ! dpkg -s mr >/dev/null 2>/dev/null && ! dpkg -s myrepos >/dev/null 2>/dev/null; then
+  echo "[-] Please 'apt install mr' before running $0" >&2
+  exit 1
+fi
+
+# No arguments, use default location of ../
+if [ -z "${target_dir}" ]; then
+  target_dir=$( realpath ${repo_dir}/.. )
+fi
+target_dir=$( realpath ${target_dir} )
+
+# Create checkout location
+mkdir -p "${target_dir}/"
+
+# Feedback about action
+echo "[>] I will setup '${target_dir}/.mrconfig' to easily checkout all repositories"
 confirm_to_continue
 
-cp ${team_repo}/mrconfig ${target_dir}/.mrconfig
+# Copy myrepos config
+cp "${repo_dir}/mrconfig" "${target_dir}/.mrconfig"
 if [ ! -e ~/.mrtrust ] || ! grep -q "${target_dir}/.mrconfig" ~/.mrtrust; then
   echo "${target_dir}/.mrconfig" >>~/.mrtrust
 fi
 
-echo "[>] I will run 'mr --force checkout' to clone all repositories (in ${target_dir})."
+# Feedback about action
+echo "[>] I will run 'mr --force checkout' to clone all repositories (in ${target_dir})"
 confirm_to_continue
 
-cd ${target_dir}/
+# Clone repos
+cd "${target_dir}/"
 mr --force checkout --verbose --stats

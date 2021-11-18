@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+# After running, may wish to execute:
+#   - setup-team-repo (to pull any new repos)
+#   - archive-team-repo (to remove any old repos)
+#
 
 export LC_ALL=C
 
