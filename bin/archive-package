@@ -1,33 +1,41 @@
-#!/bin/sh
+#!/usr/bin/env bash
+#
+# Archived remote repos
+#
+# Usage: ./bin/archive-package <packages>
+#
 
-check_return_code() {
-    if [ $? -eq 0 ]; then
-        echo "Project kalilinux/packages/$PACKAGE archived."
-    else
-        echo "Something went wrong with archival of kalilinux/packages/$PACKAGE!"
-        exit 1
-    fi
-}
+set -e
 
+package=$1
 source .gitlab-token
 
-if [ -z "$SALSA_TOKEN" ]; then
-    echo "ERROR: No token configured in .gitlab-token" >&2
+check_return_code() {
+  if [ $? -eq 0 ]; then
+    echo "Project kalilinux/packages/${package} archived"
+  else
+    echo "[-] ERROR: Something went wrong with archival of https://gitlab.com/kalilinux/packages/${package}" >&2
     exit 1
+  fi
+}
+
+if [ -z "${SALSA_TOKEN}" ]; then
+  echo "[-] ERROR: No token configured in ./.gitlab-token" >&2
+  exit 1
 fi
 
-PACKAGE=$1
-
-if [ -z "$PACKAGE" ]; then
-    echo "ERROR: No package indicated on the command line" >&2
-    exit 1
+if [ -z "${package}" ]; then
+  echo "[-] ERROR: No package indicated on the command line" >&2
+  echo "[-] $0 <package>" >&2
+  exit 1
 fi
 
 curl \
   --silent \
   --show-error \
   --request POST \
-  --header "PRIVATE-TOKEN: $SALSA_TOKEN" \
-  "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F$PACKAGE/archive" \
-  -o /dev/null
+  --header "PRIVATE-TOKEN: ${SALSA_TOKEN}" \
+  -o /dev/null \
+  "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F${package}/archive"
+
 check_return_code
