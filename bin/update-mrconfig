@@ -1,16 +1,22 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
+# Refresh mrconfig with active repos
 # After running, may wish to execute:
-#   - setup-team-repo (to pull any new repos)
-#   - archive-team-repo (to remove any old repos)
+#   - ./bin/setup-team-repo (to pull any new repos)
+#   - ./bin/archive-team-repo (to remove any old repos)
 #
+# Usage: ./bin/update-mrconfig
+# There are no arguments
+#
+
+set -e
 
 export LC_ALL=C
 
 ## https://gitlab.com/kalilinux/packages
-projects=$( salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ { print $2 }' | sort )
+projects=$(salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
 
-cat <<EOF>mrconfig
+cat <<EOF> mrconfig
 [DEFAULT]
 jobs = 4
 # Ignore svn/cvs metadata
@@ -19,9 +25,9 @@ cvs_test = false
 EOF
 
 for project in ${projects}; do
-  cat <<EOF>>mrconfig
+  cat <<EOF>> mrconfig
 
-[$project]
+[${project}]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/${project}.git
 EOF
 done
