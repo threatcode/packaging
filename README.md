@@ -12,7 +12,7 @@ Store your key in the `.gitlab-token` file (within this folder) with this
 command (replace XXX with the real token):
 
 ```bash
-$ echo "SALSA_TOKEN='XXXX'" > .gitlab-token
+$ echo "SALSA_TOKEN='XXXX'" > ./.gitlab-token
 ```
 
 You will also need to have configured your API token in: `~/.python-gitlab.cfg`.
@@ -53,6 +53,22 @@ gbp:info: Cloning from 'git@gitlab.com:kalilinux/packages/dpkg.git'
 mr checkout: finished (578 ok; 0 failed)
 $
 ```
+
+- - -
+
+Over time, repositories will be archived for various reasons. If you wish to move these folders to a differnet location
+
+```bash
+$ ./bin/archive-team-repos ~/kali/packages/ ~/kali/archive
+[>] I will compare '/home/g0tmi1k/kali/packages/.mrconfig' to '/home/g0tmi1k/kali/packages' to see any packages which have been archived
+[?] Shall I proceed? [Y/n] y
+[...]
+$
+```
+
+- - -
+
+_One liner to handle all local repo work: `~/kali/tools/bin/update-mrconfig && ~/kali/tools/bin/setup-team-repos ~/kali/packages/ && ~/kali/tools/bin/archive-team-repos ~/kali/packages/ ~/kali/archive`_
 
 ### configure-packages: Configure git packaging repositories
 

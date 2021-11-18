@@ -49,7 +49,7 @@ if [ ! -e "${package_dir}/.mrconfig" ]; then
 fi
 
 # Feedback about action
-echo "[>] I will compare '${package_dir}/.mrconfig' to '${package_dir}' to see any packages have been archived"
+echo "[>] I will compare '${package_dir}/.mrconfig' to '${package_dir}' to see any packages which have been archived"
 confirm_to_continue
 
 # Not using while loop, due to nested read
