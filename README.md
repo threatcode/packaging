@@ -56,11 +56,12 @@ $
 
 - - -
 
-Over time, repositories will be archived for various reasons. If you wish to move these folders to a differnet location
+Over time, repositories will be archived for various reasons. If you wish to
+move these folders to a different location:
 
 ```bash
 $ ./bin/archive-team-repos ~/kali/packages/ ~/kali/archive
-[>] I will compare '/home/g0tmi1k/kali/packages/.mrconfig' to '/home/g0tmi1k/kali/packages' to see any packages which have been archived
+[>] I will compare '/home/user/kali/packages/.mrconfig' to '/home/user/kali/packages' to see any packages which have been archived
 [?] Shall I proceed? [Y/n] y
 [...]
 $
@@ -68,7 +69,9 @@ $
 
 - - -
 
-_One liner to handle all local repo work: `~/kali/tools/bin/update-mrconfig && ~/kali/tools/bin/setup-team-repos ~/kali/packages/ && ~/kali/tools/bin/archive-team-repos ~/kali/packages/ ~/kali/archive`_
+_One liner to handle all local repo work: `~/kali/tools/bin/update-mrconfig &&
+~/kali/tools/bin/setup-team-repos ~/kali/packages/ &&
+~/kali/tools/bin/archive-team-repos ~/kali/packages/ ~/kali/archive`_
 
 ### configure-packages: Configure git packaging repositories
 

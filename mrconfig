@@ -1084,6 +1084,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [python-cffi-py2]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cffi-py2.git
 
+[python-cherrypy-cors]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cherrypy-cors.git
+
 [python-cx-oracle]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cx-oracle.git
 
