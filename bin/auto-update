@@ -74,6 +74,20 @@ create_if_missing() {
     fi
 }
 
+# Whether this package was forked from another distro
+package_is_fork() {
+    # Fork where XSBC-O-M has been set already
+    if grep -q "^XSBC-Original-Maintainer:" debian/control; then
+        return 0
+    fi
+    # Likely a fork where XSBC-O-M was not set yet
+    if ! grep -q "^Maintainer: .*@kali\.org" debian/control; then
+        return 0
+    fi
+    # Not a fork
+    return 1
+}
+
 # Track whether we have made changes
 _changed=0
 
