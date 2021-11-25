@@ -18,11 +18,48 @@ else
 fi
 record_change "Update Maintainer field" $control_file
 
-# Vcs-*
-sed -i \
-    -e "s|^Vcs-Git: .*|Vcs-Git: https://gitlab.com/kalilinux/packages/$SOURCE.git|i" \
-    -e "s|^Vcs-Browser: .*|Vcs-Browser: https://gitlab.com/kalilinux/packages/$SOURCE|i" \
-    $control_file
+# VCS-*
+rename_orig_vcs() {
+    local type=
+    local url=
+    local origin=
+
+    for type in $@; do
+        grep -i -q "^Vcs-$type:" $control_file || continue
+        url=$(sed -n "s|^Vcs-$type: *||ip" $control_file)
+	case "$url" in
+            *debian.org*)    origin=Debian ;;
+            *kalilinux*)     origin=Kali ;;
+            *launchpad.net*) origin=Ubuntu ;;
+            *RPi-Distro*)    origin=Raspberry ;;
+            *) origin=Original ;;
+        esac
+        [ $origin != Kali ] || continue
+        sed -i -e "s|^Vcs-$type: \(.*\)|XS-$origin-Vcs-$type: \1|i" $control_file
+    done
+}
+rename_orig_vcs Browser Bzr Git Svn
+unset rename_orig_vcs
+
+set_kali_vcs() {
+    local type=$1
+    local url=$2
+    local lineno=
+
+    if grep -i -q "^Vcs-$type:" $control_file; then
+        sed -i -e "s|^Vcs-$type: .*|Vcs-$type: $url|i" $control_file
+    elif grep -i -q "^XS-.*-Vcs" $control_file; then
+        lineno=$(grep -i -n "^XS-.*-Vcs" $control_file | tail -1 | cut -f1 -d:)
+        sed -i -e "${lineno}a Vcs-$type: $url" $control_file
+    else
+        lineno=$(grep -n "^ *$" $control_file | head -1 | cut -f1 -d:)
+        sed -i -e "${lineno}i Vcs-$type: $url" $control_file
+    fi
+}
+set_kali_vcs Browser https://gitlab.com/kalilinux/packages/$SOURCE
+set_kali_vcs Git https://gitlab.com/kalilinux/packages/$SOURCE.git
+unset set_kali_vcs
+
 record_change "Update Vcs-* fields" $control_file
 
 # Homepage
