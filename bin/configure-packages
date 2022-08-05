@@ -15,7 +15,7 @@ fi
 
 if [ -z "${SALSA_TOKEN}" ]; then
   echo "ERROR: You are missing ./.gitlab-token" >&2
-  echo "Create: https://docs.gitlab.com/ee/user/profile/personal_access_tokens" >&2
+  echo "Create: https://gitlab.com/-/profile/personal_access_tokens" >&2
   echo "Afterwards: echo \"SALSA_TOKEN='XXX'\" > ./.gitlab-token" >&2
   exit 1
 fi

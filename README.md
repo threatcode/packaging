@@ -6,7 +6,7 @@ Helper scripts to manage the huge set of repositories used for Kali packages.
 
 To make use of some of the scripts, you need to setup a "Personal Access
 Token" granting access to the "api". You do that here:
-<https://docs.gitlab.com/ee/user/profile/personal_access_tokens>
+<https://gitlab.com/-/profile/personal_access_tokens>
 
 Store your key in the `.gitlab-token` file (within this folder) with this
 command (replace XXX with the real token):
