@@ -14,7 +14,7 @@ set -e
 export LC_ALL=C
 
 ## https://gitlab.com/kalilinux/packages
-projects=$(salsa --conf-file /dev/null --api-url https://gitlab.com/api/v4/ --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
+projects=$(salsa --conf-file ./salsa/auth.conf --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
 
 cat <<EOF> mrconfig
 [DEFAULT]
