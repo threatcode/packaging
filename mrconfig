@@ -13,6 +13,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [aadict]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aadict.git
 
+[aardwolf]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aardwolf.git
+
 [acccheck]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/acccheck.git
 
@@ -93,6 +96,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [arachni-rpc]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arachni-rpc.git
+
+[arc4]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arc4.git
 
 [arduino]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arduino.git
@@ -222,6 +228,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [burpsuite]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/burpsuite.git
+
+[burpsuite-prior2022]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/burpsuite-prior2022.git
 
 [bytecode-viewer]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bytecode-viewer.git
