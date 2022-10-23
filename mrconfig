@@ -115,8 +115,14 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [asleap]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/asleap.git
 
+[asn1tools]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/asn1tools.git
+
 [assetfinder]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/assetfinder.git
+
+[asyauth]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/asyauth.git
 
 [asysocks]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/asysocks.git
