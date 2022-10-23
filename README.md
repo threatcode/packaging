@@ -15,7 +15,7 @@ cd ~/kali/tools/ && \
 ~/kali/tools/bin/update-mrconfig && \
 ~/kali/tools/bin/unprotect && \
 ~/kali/tools/bin/configure-packages --all
-~/kali/tools/bin/archive-team-repos ~/kali/packages/ ~/kali/archive && \
+~/kali/tools/bin/archive-team-repos ~/kali/packages/ ~/kali/archive/ && \
 ~/kali/tools/bin/setup-team-repos ~/kali/packages/ && \
 ls -1 ~/kali/packages/ \
   | while read -r package; do
