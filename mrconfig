@@ -802,8 +802,8 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [legion]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/legion.git
 
-[libadwaita]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libadwaita.git
+[libadwaita-1]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libadwaita-1.git
 
 [libcrafter]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libcrafter.git
@@ -1615,9 +1615,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [subjack]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/subjack.git
 
-[sublist3r]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sublist3r.git
-
 [syncer]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/syncer.git
 
@@ -1698,9 +1695,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [voiphopper]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/voiphopper.git
-
-[waagent]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/waagent.git
 
 [watobo]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/watobo.git
