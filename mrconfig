@@ -1276,6 +1276,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [python-pyric]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-pyric.git
 
+[python-python-anticaptcha]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-python-anticaptcha.git
+
 [python-roguehostapd]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-roguehostapd.git
 
