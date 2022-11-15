@@ -847,6 +847,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [maryam]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/maryam.git
 
+[masky]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/masky.git
+
 [massdns]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/massdns.git
 
