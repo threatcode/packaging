@@ -118,6 +118,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [bloodhound]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bloodhound.git
 
+[bloodhound.py]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bloodhound.py.git
+
 [bluelog]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bluelog.git
 
