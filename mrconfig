@@ -1000,6 +1000,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [pack]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pack.git
 
+[pack2]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pack2.git
+
 [packageurl-python]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/packageurl-python.git
 
