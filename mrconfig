@@ -742,6 +742,12 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [kali-hw-gemini]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-hw-gemini.git
 
+[kali-hw-pinephone]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-hw-pinephone.git
+
+[kali-hw-pinephonepro]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-hw-pinephonepro.git
+
 [kali-menu]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-menu.git
 
