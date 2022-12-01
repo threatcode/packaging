@@ -1390,6 +1390,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [recstudio]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/recstudio.git
 
+[redeye]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/redeye.git
+
 [redfang]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/redfang.git
 
