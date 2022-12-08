@@ -430,9 +430,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [flask-restless]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-restless.git
 
-[flask-restx]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-restx.git
-
 [fleep]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fleep.git
 
