@@ -16,6 +16,11 @@ export LC_ALL=C
 ## https://gitlab.com/kalilinux/packages
 projects=$(salsa --conf-file ./salsa/auth.conf --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
 
+if [ -z "${projects}" ]; then
+  echo "[-] Unable to get any repos" 1>&2
+  exit 1
+fi
+
 cat <<EOF> mrconfig
 [DEFAULT]
 jobs = 4

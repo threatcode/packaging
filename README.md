@@ -37,7 +37,7 @@ You will need the following programs:
 
 ```bash
 $ sudo apt update
-$ sudo apt -y install curl devscripts git-buildpackage myrepos python3-gitlab gitlab-cli
+$ sudo apt install --no-install-recommends -y curl devscripts git-buildpackage myrepos python3-gitlab gitlab-cli
 ```
 
 - - -
@@ -46,7 +46,7 @@ To make use of some of the scripts, you need to setup a "Personal Access Token" 
 You do that here:
 <https://gitlab.com/-/profile/personal_access_tokens>
 
-Store your key in the `.gitlab-token` file (within this folder) with this command (replace XXX with the real token): <!--This is for shell scripts/salsa -->
+Store your key in the `./.gitlab-token` file (the root of this folder) with this command (replace XXX with the real token): <!--This is for shell scripts/salsa -->
 
 ```bash
 $ echo "SALSA_TOKEN='XXX'" > ./.gitlab-token

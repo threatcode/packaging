@@ -19,8 +19,8 @@
 # ## CI/CD Settings - Schedules
 # URL: https://gitlab.com/kalilinux/tools/packaging/-/pipeline_schedules
 # CI/CD -> Schedules -> New Schedule
-# - Description: `Weekly`
-# - Interval Pattern: `Custom` -> `0 0 * * 0`
+# - Description: `Daily`
+# - Interval Pattern: `Custom` -> `0 0 * * *`
 # - Cron Timezone: `UTC`
 # - Target branch or tag: `master`
 # - Activated: `Enable`
