@@ -1393,9 +1393,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [redsnarf]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/redsnarf.git
 
-[regripper]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/regripper.git
-
 [responder]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/responder.git
 
