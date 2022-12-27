@@ -33,6 +33,6 @@ for project in ${projects}; do
   cat <<EOF>> mrconfig
 
 [${project}]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/${project}.git
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/${project}.git
 EOF
 done
