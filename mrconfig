@@ -67,6 +67,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [arjun]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arjun.git
 
+[arkime]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arkime.git
+
 [armitage]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/armitage.git
 
@@ -987,9 +990,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [oracle-instantclient-sqlplus]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/oracle-instantclient-sqlplus.git
-
-[orjson]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/orjson.git
 
 [oscanner]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/oscanner.git
