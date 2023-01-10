@@ -367,6 +367,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [evil-winrm]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/evil-winrm.git
 
+[evilginx2]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/evilginx2.git
+
 [exe2hexbat]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/exe2hexbat.git
 
@@ -534,6 +537,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [golang-github-m-mizutani-urlscan-go]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-m-mizutani-urlscan-go.git
+
+[golang-github-mwitkow-go-http-dialer]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-mwitkow-go-http-dialer.git
 
 [golang-github-ne0nd0g-ja3transport]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-ne0nd0g-ja3transport.git
