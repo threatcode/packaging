@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# Archived remote repos
+# Archived a single package (remote repository on GitLab.com)
 #
-# Usage: ./bin/archive-package <packages>
+# Usage: ./bin/archive-package [<packages>]
 #
 
 set -e
@@ -20,7 +20,7 @@ check_return_code() {
 }
 
 if [ -z "${SALSA_TOKEN}" ]; then
-  echo "[-] ERROR: No token configured in ./.gitlab-token" >&2
+  echo "[-] ERROR: No token configured in $( pwd )/.gitlab-token" >&2
   exit 1
 fi
 
@@ -35,7 +35,7 @@ curl \
   --show-error \
   --request POST \
   --header "PRIVATE-TOKEN: ${SALSA_TOKEN}" \
-  -o /dev/null \
+  --output /dev/null \
   "https://gitlab.com/api/v4/projects/kalilinux%2Fpackages%2F${package}/archive"
 
 check_return_code

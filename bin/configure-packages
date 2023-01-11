@@ -22,7 +22,7 @@ fi
 
 if [ "${package}" = "--all" ]; then
   # This is done, as --all would be doing BOTH --archived and --no-archived
-  # https://gitlab.com/kalilinux/packages
+  # 5034987 = https://gitlab.com/kalilinux/packages
   package=$(salsa --conf-file ./salsa/auth.conf \
         --group-id 5034987 \
         --no-archived \

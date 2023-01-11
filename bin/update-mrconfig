@@ -2,8 +2,10 @@
 #
 # Refresh mrconfig with active repos
 # After running, may wish to execute:
-#   - ./bin/setup-team-repo (to pull any new repos)
-#   - ./bin/archive-team-repo (to remove any old repos)
+#   - $ ./bin/setup-team-repo   (Pull any new repos)
+#   - $ ./bin/archive-team-repo (Move any old repos)
+#   - $ ./bin/auto-update       (Configure repos)
+
 #
 # Usage: ./bin/update-mrconfig
 # There are no arguments
@@ -13,7 +15,7 @@ set -e
 
 export LC_ALL=C
 
-## https://gitlab.com/kalilinux/packages
+## 5034987 = https://gitlab.com/kalilinux/packages
 projects=$(salsa --conf-file ./salsa/auth.conf --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
 
 if [ -z "${projects}" ]; then

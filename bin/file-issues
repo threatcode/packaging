@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""File GitLab issues through the API.
+"""
+File GitLab issues through the API.
 
 This scripts is helpful when you have to file many issues against GitLab
 projects.

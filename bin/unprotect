@@ -11,7 +11,7 @@ set -e
 if [ -n "$1" ]; then
   projects="$@"
 else
-  ## https://gitlab.com/kalilinux/packages
+  ## 5034987 = https://gitlab.com/kalilinux/packages
   projects=$(salsa --conf-file ./salsa/auth.conf --group-id 5034987 ls | awk '/Name:/ {print $2}' | sort)
 fi
 

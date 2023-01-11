@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 #
-# Move any archived repos which have been clone locally
+# Move any locally clone repositories which have been remotely archived
 #
 # Usage: ./bin/archive-team-repo [<packages-path>] [<archived-path>]
 # Without argument, will default to:
@@ -43,7 +43,7 @@ fi
 archive_dir=$( realpath ${archive_dir} )
 
 # Create archive location
-mkdir -p "${archive_dir}/"
+mkdir -pv "${archive_dir}/"
 
 # Copy myrepos config
 if [ ! -e "${package_dir}/.mrconfig" ]; then
@@ -62,6 +62,6 @@ for package in $(ls -1 "${package_dir}/"); do
   if ! grep -q "^\[${package}\]$" "${package_dir}/.mrconfig"; then
     echo "[>] Move '${package_dir}/${package}' to '${archive_dir}/${package}'?"
     confirm_to_continue
-    mv "${package_dir}/${package}" "${archive_dir}/${package}"
+    mv -v "${package_dir}/${package}" "${archive_dir}/${package}"
   fi
 done
