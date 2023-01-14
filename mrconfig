@@ -1648,6 +1648,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [teamsploit]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/teamsploit.git
 
+[test123]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/test123.git
+
 [tftpd32]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/tftpd32.git
 
