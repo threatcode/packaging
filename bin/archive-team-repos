@@ -38,7 +38,7 @@ package_dir=$( realpath ${package_dir} )
 
 # No arguments, use default location
 if [ -z "${archive_dir}" ]; then
-  archive_dir=$( realpath ${repo_dir}/../archive )
+  archive_dir=$( realpath ${repo_dir}/../archived )
 fi
 archive_dir=$( realpath ${archive_dir} )
 
