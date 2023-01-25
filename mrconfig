@@ -1228,9 +1228,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [python-flask-classful]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-flask-classful.git
 
-[python-flask-session]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-flask-session.git
-
 [python-googlesearch]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-googlesearch.git
 
