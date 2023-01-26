@@ -49,9 +49,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [amass]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/amass.git
 
-[android-sdk]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/android-sdk.git
-
 [apache-users]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/apache-users.git
 
