@@ -610,6 +610,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [heartleech]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/heartleech.git
 
+[helm]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/helm.git
+
 [hexinject]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hexinject.git
 
