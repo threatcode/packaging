@@ -61,9 +61,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [arc4]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arc4.git
 
-[arjun]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arjun.git
-
 [arkime]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arkime.git
 
@@ -888,6 +885,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [mitmproxy]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmproxy.git
+
+[mitmproxy-wireguard]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmproxy-wireguard.git
 
 [mongo-tools]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mongo-tools.git
