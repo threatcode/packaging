@@ -232,6 +232,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [cvss]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cvss.git
 
+[cyberchef]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cyberchef.git
+
 [cymothoa]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cymothoa.git
 
