@@ -130,9 +130,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [bluez]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bluez.git
 
-[bluez-firmware]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bluez-firmware.git
-
 [bruteshark]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bruteshark.git
 
