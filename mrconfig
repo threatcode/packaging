@@ -1309,6 +1309,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [python-secure]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-secure.git
 
+[python-selenium]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-selenium.git
+
 [python-simple-rest-client]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-simple-rest-client.git
 
