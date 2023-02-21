@@ -727,6 +727,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [kali-archive-keyring]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-archive-keyring.git
 
+[kali-autopilot]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-autopilot.git
+
 [kali-community-wallpapers]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-community-wallpapers.git
 
