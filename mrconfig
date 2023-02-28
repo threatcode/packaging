@@ -1564,9 +1564,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [slowapi]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/slowapi.git
 
-[smali]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/smali.git
-
 [smtp-user-enum]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/smtp-user-enum.git
 
