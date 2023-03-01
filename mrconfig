@@ -145,9 +145,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [caldera]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/caldera.git
 
-[censys-python]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/censys-python.git
-
 [certgraph]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/certgraph.git
 
@@ -1177,6 +1174,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pypykatz]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pypykatz.git
 
+[pysecretsocks]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pysecretsocks.git
+
 [pyshodan]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyshodan.git
 
@@ -1242,9 +1242,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [python-graphql-core]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-graphql-core.git
-
-[python-graphql-relay]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-graphql-relay.git
 
 [python-grequests]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-grequests.git
