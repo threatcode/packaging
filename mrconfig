@@ -640,11 +640,11 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [hyperion]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hyperion.git
 
+[i3-dotfiles]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3-dotfiles.git
+
 [i3-gaps]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3-gaps.git
-
-[i3-gaps-dotfiles]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3-gaps-dotfiles.git
 
 [i3lock-color]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3lock-color.git
