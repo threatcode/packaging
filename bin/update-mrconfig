@@ -29,6 +29,12 @@ jobs = 4
 # Ignore svn/cvs metadata
 svn_test = false
 cvs_test = false
+# Checkout the debian branch if it exists
+post_checkout =
+	cd \$MR_REPO
+	if git show-ref -q --verify refs/remotes/origin/debian; then
+	    git branch --track debian origin/debian
+	fi
 EOF
 
 for project in ${projects}; do
