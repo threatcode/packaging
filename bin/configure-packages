@@ -39,4 +39,5 @@ salsa \
   --conf-file +./salsa/packages.conf \
   --debug \
   --verbose \
+  --no-fail \
   update_safe ${package}
