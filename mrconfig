@@ -1522,6 +1522,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [rule-engine]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rule-engine.git
 
+[rz-ghidra]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rz-ghidra.git
+
 [s3scanner]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/s3scanner.git
 
