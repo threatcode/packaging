@@ -34,6 +34,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [adw-gtk3-kali]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/adw-gtk3-kali.git
 
+[aesedb]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aesedb.git
+
 [aiocmd]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aiocmd.git
 
@@ -663,9 +666,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [i3-dotfiles]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3-dotfiles.git
-
-[i3-gaps]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3-gaps.git
 
 [i3lock-color]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/i3lock-color.git
