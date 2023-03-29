@@ -364,6 +364,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [eapmd5pass]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/eapmd5pass.git
 
+[eksctl]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/eksctl.git
+
 [email2phonenumber]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/email2phonenumber.git
 
