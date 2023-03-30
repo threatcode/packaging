@@ -1582,6 +1582,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [skipfish]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/skipfish.git
 
+[slimtoolkit]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/slimtoolkit.git
+
 [sliver]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sliver.git
 
@@ -1815,6 +1818,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [writehat]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/writehat.git
+
+[wsgidav]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/wsgidav.git
 
 [xlutils]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/xlutils.git
