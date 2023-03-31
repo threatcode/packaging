@@ -11,7 +11,7 @@ if [ "$CURDIR_NAME" != "$SOURCE" ]; then
 fi
 
 # Maintainer
-if grep -q -E "Maintainer: .*(kali|offensive-security|hertzog|sophie@freexian)" $control_file; then
+if grep -q -E "Maintainer: .*(kali|offensive-security|offsec|hertzog|sophie@freexian)" $control_file; then
     sed -i -e "s|^Maintainer: .*|Maintainer: Kali Developers <devel@kali.org>|i" $control_file
 else
     sed -i -e "s|^Maintainer: \(.*\)|XSBC-Original-Maintainer: \1\nMaintainer: Kali Developers <devel@kali.org>|i" $control_file
