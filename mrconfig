@@ -661,6 +661,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [httpx-toolkit]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/httpx-toolkit.git
 
+[hubble]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hubble.git
+
 [hurl]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hurl.git
 
