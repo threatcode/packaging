@@ -178,6 +178,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [chisel]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/chisel.git
 
+[cilium-cli]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cilium-cli.git
+
 [cisco-auditing-tool]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cisco-auditing-tool.git
 
