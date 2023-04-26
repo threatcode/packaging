@@ -376,6 +376,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [emailharvester]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/emailharvester.git
 
+[endesive]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/endesive.git
+
 [enum4linux]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/enum4linux.git
 
@@ -453,9 +456,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [flask-kvsession]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-kvsession.git
-
-[flask-restless]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-restless.git
 
 [fleep]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fleep.git
