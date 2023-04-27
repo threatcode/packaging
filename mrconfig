@@ -460,6 +460,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [fleep]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fleep.git
 
+[fpdf]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fpdf.git
+
 [fragrouter]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fragrouter.git
 
@@ -1539,6 +1542,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [sakis3g]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sakis3g.git
+
+[sarge]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sarge.git
 
 [sbd]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sbd.git
