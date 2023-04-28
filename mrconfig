@@ -43,9 +43,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [aioconsole]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aioconsole.git
 
-[aiohttp-apispec]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aiohttp-apispec.git
-
 [aiomultiprocess]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aiomultiprocess.git
 
@@ -669,6 +666,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [hubble]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hubble.git
+
+[humble]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/humble.git
 
 [hurl]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hurl.git
