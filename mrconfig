@@ -223,6 +223,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [copy-router-config]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/copy-router-config.git
 
+[cosign]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cosign.git
+
 [covenant-kbx]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/covenant-kbx.git
 
