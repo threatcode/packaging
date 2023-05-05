@@ -475,9 +475,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [ftester]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ftester.git
 
-[fudgec2]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fudgec2.git
-
 [fxscintilla]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fxscintilla.git
 
@@ -1678,6 +1675,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [subjack]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/subjack.git
 
+[syft]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/syft.git
+
 [syncer]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/syncer.git
 
@@ -1686,6 +1686,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [teamsploit]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/teamsploit.git
+
+[terraform]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/terraform.git
 
 [tetragon]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/tetragon.git
