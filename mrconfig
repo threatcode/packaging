@@ -595,6 +595,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [google-nexus-tools]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/google-nexus-tools.git
 
+[gophish]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gophish.git
+
 [gospider]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gospider.git
 
@@ -1719,6 +1722,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [token-bucket]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/token-bucket.git
+
+[trivy]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/trivy.git
 
 [truecrack]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/truecrack.git
