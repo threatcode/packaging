@@ -292,6 +292,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [dirbuster]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/dirbuster.git
 
+[dissect.cstruct]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/dissect.cstruct.git
+
 [django-auditlog]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-auditlog.git
 
@@ -1620,9 +1623,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [sparrow-wifi]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparrow-wifi.git
-
-[sparsebitset]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparsebitset.git
 
 [sparta-scripts]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparta-scripts.git
