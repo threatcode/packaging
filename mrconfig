@@ -1120,6 +1120,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [plecost]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/plecost.git
 
+[plotext]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/plotext.git
+
 [policykit-1]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/policykit-1.git
 
@@ -1248,6 +1251,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [python-cherrypy-cors]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cherrypy-cors.git
+
+[python-cstruct]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-cstruct.git
 
 [python-dsinternals]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-dsinternals.git
