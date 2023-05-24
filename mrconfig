@@ -733,6 +733,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [jd-gui]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/jd-gui.git
 
+[jefferson]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/jefferson.git
+
 [john]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/john.git
 
@@ -888,6 +891,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [live-build]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/live-build.git
+
+[lzallright]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/lzallright.git
 
 [maltego]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/maltego.git
@@ -1747,8 +1753,14 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [twofi]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/twofi.git
 
+[ubi-reader]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ubi-reader.git
+
 [uhd-images]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/uhd-images.git
+
+[unblob-native]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/unblob-native.git
 
 [unicorn-magic]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/unicorn-magic.git
