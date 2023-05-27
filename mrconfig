@@ -1213,6 +1213,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pypcapfile]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pypcapfile.git
 
+[pyperscan]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyperscan.git
+
 [pyppeteer]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyppeteer.git
 
