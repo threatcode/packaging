@@ -700,6 +700,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [ident-user-enum]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ident-user-enum.git
 
+[imhex-patterns]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/imhex-patterns.git
+
 [impacket-scripts]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/impacket-scripts.git
 
