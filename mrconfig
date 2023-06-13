@@ -1579,6 +1579,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [sarge]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sarge.git
 
+[sasquatch]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sasquatch.git
+
 [sbd]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sbd.git
 
