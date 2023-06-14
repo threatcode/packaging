@@ -1447,9 +1447,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [realtek-rtl88xxau-dkms]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/realtek-rtl88xxau-dkms.git
 
-[reaver]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/reaver.git
-
 [rebind]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rebind.git
 
