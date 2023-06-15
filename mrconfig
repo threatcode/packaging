@@ -700,6 +700,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [ident-user-enum]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ident-user-enum.git
 
+[imhex]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/imhex.git
+
 [imhex-patterns]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/imhex-patterns.git
 
@@ -1698,6 +1701,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [sslyze]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sslyze.git
+
+[starkiller]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/starkiller.git
 
 [subfinder]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/subfinder.git
