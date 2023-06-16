@@ -496,9 +496,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [ghidra-data]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ghidra-data.git
 
-[gitleaks]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gitleaks.git
-
 [globre]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/globre.git
 
