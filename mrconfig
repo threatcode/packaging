@@ -853,6 +853,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [kubernetes-helm]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kubernetes-helm.git
 
+[kustomize]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kustomize.git
+
 [kwin-style-kali]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kwin-style-kali.git
 
