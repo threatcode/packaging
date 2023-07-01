@@ -838,9 +838,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [kerberoast]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kerberoast.git
 
-[king-phisher]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/king-phisher.git
-
 [kismet]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kismet.git
 
