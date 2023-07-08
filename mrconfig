@@ -1219,6 +1219,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pymavlink]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pymavlink.git
 
+[pymetasploit3]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pymetasploit3.git
+
 [pyminifier]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyminifier.git
 
