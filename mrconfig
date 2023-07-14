@@ -886,6 +886,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [libstree]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libstree.git
 
+[libtaxii]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libtaxii.git
+
 [lief]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/lief.git
 
@@ -1704,6 +1707,12 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [starkiller]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/starkiller.git
+
+[stix2]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/stix2.git
+
+[stix2-patterns]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/stix2-patterns.git
 
 [subfinder]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/subfinder.git
