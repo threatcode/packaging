@@ -1045,6 +1045,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [ollydbg]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ollydbg.git
 
+[opentaxii]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/opentaxii.git
+
 [oracle-instantclient-basic]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/oracle-instantclient-basic.git
 
