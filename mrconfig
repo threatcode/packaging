@@ -1825,6 +1825,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [veil]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/veil.git
 
+[villain]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/villain.git
+
 [voiphopper]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/voiphopper.git
 
