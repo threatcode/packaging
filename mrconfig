@@ -1360,6 +1360,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [python-nplusone]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-nplusone.git
 
+[python-obfuscator]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-obfuscator.git
+
 [python-owasp-zap-v2.4]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-owasp-zap-v2.4.git
 
