@@ -1468,6 +1468,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [redsnarf]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/redsnarf.git
 
+[rekono-kbx]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rekono-kbx.git
+
 [responder]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/responder.git
 
