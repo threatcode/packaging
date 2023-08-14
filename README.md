@@ -300,7 +300,7 @@ $
 
 ### `./bin/gitlab-overview`: Create HTML overview of CI status
 
-This will make a [very quick & dirty "overview"](https://kalilinux.gitlab.io/tools/gitlab-ci) of our [kali-ci-pipeline](https://gitlab.com/kalilinux/tools/kali-ci-pipeline/) status:
+This will make a [very quick & dirty "overview"](https://kalilinux.gitlab.io/tools/packaging) of our [kali-ci-pipeline](https://gitlab.com/kalilinux/tools/kali-ci-pipeline/) status:
 
 ```console
 $ ./bin/gitlab-overview
@@ -403,3 +403,19 @@ $
 
 If you have not added an [SSH key](https://gitlab.com/-/profile/gpg_keys) to GitLab, you may wish to check out via HTTPS instead as this is unauthenticated. You can switch to this by doing `./bin/update-mrconfig --https`.
 
+## `cat ./.gitlab-ci.yml`
+
+We are using GitLab.com's Continuous Integration (CI), [to run various tasks at various times](./.gitlab-ci.yml).
+
+All scheduled tasks happen at [00:00 UTC](https://time.is/UTC), which includes:
+
+- Daily:
+  - `./bin/configure-gitlab`
+  - `./bin/gitlab-overview`: Output is on a GitLab page, which can be found here: [kalilinux.gitlab.io/tools/packaging/](https://kalilinux.gitlab.io/tools/packaging/)
+  - `./bin/update-mrconfig`
+- Monthly:
+  - `./bin/build-gitlab`: On the last day of each month
+<!--
+- Fortnightly:
+  `./bin/retry-gitlab`: Every 2nd Monday of the month
+-->
