@@ -1,0 +1,296 @@
+#!/usr/bin/env bash
+#
+# Using GitLab.com's CI, re-run any pipelines which were not successful
+#   _Open MR one day for devscripts salsa to add support_
+#
+# Usage: $ ./bin/retry-gitlab [--dry-run] [--quiet] [--all|<project1>] [<project2>]
+#   Without argument, will default to: '--all'
+#
+# Example:
+#   $ ./bin/retry-gitlab
+#   $ APIKEY=xxx ./bin/retry-gitlab --all --quiet
+#   $ SALSA_TOKEN=xxx ./bin/retry-gitlab project --dry-run
+#   $ ./bin/retry-gitlab project1 project2
+#
+# Requirements:
+#   # apt update && apt install --yes --no-install-recommends curl ca-certificates jq
+#   - GitLab API token: https://gitlab.com/-/profile/personal_access_tokens
+#
+
+## Quit on error
+set -e
+
+## echo 'APIKEY="12345678901234567890"' > .gitlab-token
+##   Developer role + allowed to merge
+##   REF: https://gitlab.com/profile/personal_access_tokens
+apikey=".gitlab-token"
+
+## What (sub-)group to search
+groupname="kalilinux/packages"
+
+## Command line arguments
+dry=false
+quiet=false
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+gitlab_curl() {
+  curl 2>/dev/null \
+      --silent \
+      --show-error \
+      --fail \
+      --retry 5 \
+      --header "PRIVATE-TOKEN: ${APIKEY}" \
+      $@
+}
+
+## Look for group/sub-group's ID
+##   REF: https://docs.gitlab.com/ee/api/groups.html#search-for-group
+search_groups() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/groups/?search=${1// /%20}" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.[] | select (.web_url=="https://gitlab.com/groups/'"${1}"'") | .id'
+}
+
+## Get IDs for all (sub-)group's projects
+##   REF: https://docs.gitlab.com/ee/api/groups.html#list-a-groups-projects
+get_groups_id() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/groups/${groupID}/projects/?order_by=name&sort=asc&per_page=100&page=${1}&archived=false" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.[].id'
+}
+
+## Get project's ID
+##   REF: https://docs.gitlab.com/ee/api/projects.html#get-single-project
+get_projects_id() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/projects/${groupname//\//%2F}%2F${1}" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.id'
+}
+
+## Get project's name
+##   REF: https://docs.gitlab.com/ee/api/projects.html#get-single-project
+get_projects_name() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/projects/${1}" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.name'
+}
+
+## Get pipeline latest status
+##   REF: https://docs.gitlab.com/ee/api/pipelines.html#get-the-latest-pipeline
+get_projects_pipelines_latest_status_id() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/projects/${1}/pipelines/latest" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.status, .id'
+}
+
+## Get pipeline job status
+##   REF: https://docs.gitlab.com/ee/api/jobs.html#list-pipeline-jobs
+##   created, pending, running, failed, success, canceled, skipped, waiting_for_resource, manual
+get_projects_pipelines_jobs_id() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/projects/${1}/pipelines/${2}/jobs?scope[]=failed&scope[]=canceled&scope[]=skipped&scope[]=waiting_for_resource&include_retried=false" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.[].id'
+}
+
+## Get job name
+##   REF: https://docs.gitlab.com/ee/api/jobs.html#get-a-single-job
+get_projects_job_name() {
+  gitlab_curl \
+      "https://gitlab.com/api/v4/projects/${1}/jobs/${2}" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.name'
+}
+
+## Retry complete pipeline
+##   REF: https://docs.gitlab.com/ee/api/jobs.html#retry-a-job
+post_projects_job_retry_id() {
+  gitlab_curl \
+      --request POST \
+      "https://gitlab.com/api/v4/projects/${1}/jobs/${2}/retry" \
+    | jq \
+      --compact-output \
+      --monochrome-output \
+      --raw-output \
+      '.id'
+}
+
+### Retry complete pipeline
+###   REF: https://docs.gitlab.com/ee/api/pipeline_schedules.html#run-a-scheduled-pipeline-immediately
+#function post_projects_pipeline_retry_id() {
+#  gitlab_curl \
+#      --request POST \
+#      "https://gitlab.com/api/v4/projects/${1}/pipelines/${2}/retry" \
+#    | jq --compact-output --monochrome-output --raw-output '.id'
+#}
+
+## Get all subgroups
+get_subgroups_id() {
+  ## Reset page counter
+  page=0
+
+  ## Reset
+  projects=""
+
+  ## Keep going forever
+  while true; do
+    ## Increase page counter
+    page=$((page+1))
+
+    ## Get all projects for that group's ID [page amount]
+    project=$( get_groups_id "${page}" )
+
+    ## Check the response, if there isn't any more, quit
+    test -z "${project}" \
+      && break
+
+    projects=$( echo -e "${projects}\n${project}" | grep -v '^$' )
+  done
+  echo "${projects}"
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --all )        packages="--all";;
+    --dry-run )    dry=true ;;
+    -q | --quiet ) quiet=true ;;
+    *)             packages="${packages} $1";;
+  esac
+  shift
+done
+
+packages="${packages:---all}"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+## Check for API variable/file
+if [ -n "${APIKEY}" ]; then
+  echo "[i] Found system variable: \$APIKEY"
+elif [ -e "${apikey}" ]; then
+  echo "[i] Loading GitLab API Key (File: ${apikey})"
+  source "${apikey}"
+fi
+## Using Debian devscript's salsa?
+if [ -n "${SALSA_TOKEN}" ]; then
+  echo "[i] Found system variable: \$SALSA_TOKEN"
+  APIKEY="${SALSA_TOKEN}"
+fi
+## Final check
+if [ -z "${APIKEY}" ]; then
+  echo "[-] ERROR: You are missing: $( pwd )/${apikey} or system variable: \$APIKEY" >&2
+  echo "    Create: https://gitlab.com/-/profile/personal_access_tokens" >&2
+  echo "    Afterwards: echo \"SALSA_TOKEN='XXX'\" > $( pwd )/${apikey}" >&2
+  exit 1
+fi
+
+## Check for packages
+for cmd in jq curl; do
+  if ! command -v "${cmd}" 1>/dev/null 2>&1; then
+    echo "[-] Missing: ${cmd}"
+    exit 1
+  fi
+done
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+groupID=$( search_groups "${groupname}" )
+echo "[i] Found (sub-)group: https://gitlab.com/${groupname} (ID: ${groupID})"
+
+if [ "${packages}" = "--all" ]; then
+  echo "[i] Fetching all projects"
+  packages=$( get_subgroups_id "${groupID}" )
+else
+  x=""
+  for package in ${packages}; do
+    tmp="$( get_projects_id "${package}" )"
+    x="$( echo -e "${x}\n${tmp}" | grep -v '^$' )"
+  done
+  packages="${x}"
+fi
+
+packages_count=$( echo "${packages}" | wc -l )
+echo "[i] Found ${packages_count} projects (https://gitlab.com/${groupname})"
+
+## For every project
+i=0
+y=0
+for id in ${packages}; do
+  name=$( get_projects_name "${id}" )
+
+  pipline_latest=$( get_projects_pipelines_latest_status_id "${id}" )
+  pipline_status=$( echo "${pipline_latest}" | head -n 1 )
+  pipline_id=$( echo "${pipline_latest}" | tail -n 1 )
+
+  test -z "${pipline_status}" \
+    && pipline_status="disabled"
+  #echo "[-] ${pipline_status} pipeline for ${name} ~ https://gitlab.com/${groupname}/${name}/-/pipelines" 1>&2
+
+  ## REF: https://docs.gitlab.com/ee/api/pipelines.html#get-a-single-pipeline
+  ##      created, waiting_for_resource, preparing, pending, running, success, failed, canceled, skipped, manual, scheduled
+  if [ "${pipline_status}" = "failed" ] ||
+  [ "${pipline_status}" = "canceled" ]; then
+  #[ "${pipline_status}" = "disabled" ] ||
+    ## Retry ALL of the pipeline
+    #id=$( post_projects_pipeline_retry_id "${id}" "${pipline_id}" )
+
+    ## Get failed jobs
+    jobs_id=$( get_projects_pipelines_jobs_id "${id}" "${pipline_id}" )
+
+    ## Re-run each failed job
+    for job_id in ${jobs_id}; do
+      ## This isn't the most efficient way of doing it. Quick & dirty
+      job_name=$( get_projects_job_name "${id}" "${job_id}" )
+
+      ## If we don't get the job name for any reason, skip
+      if [ -z "${job_name}" ]; then
+        if [ "${quiet}" != "true" ]; then
+          echo "[-] Could not get ${pipline_status} job name for ${name} ~ https://gitlab.com/${groupname}/${name}/-/jobs/${job_id}" >&2
+          echo "                                                           https://gitlab.com/${groupname}/${name}/-/pipelines/${pipline_id}" >&2
+        fi
+        continue
+      fi
+
+      echo "[i] Re-running ${name} (${id})'s ${pipline_status} job: ${job_name} ~ https://gitlab.com/${groupname}/${name}/-/jobs/${job_id}"
+      if [ "${dry}" != "true" ]; then
+        project_id=$( post_projects_job_retry_id "${id}" "${job_id}" )
+      elif [ "${quiet}" != "true" ]; then
+        echo "[i]  DRY RUN"
+      fi
+      y=$((y+1))
+    done
+
+    i=$((i+1))
+  fi
+done
+
+echo "[+] Re-ran ${y} unsuccessful jobs (${i} broken pipelines)"
+echo "[+] Done"

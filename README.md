@@ -95,6 +95,27 @@ renamed '/home/user/kali/packages/apt2' -> '/home/user/kali/archived/apt2'
 $
 ```
 
+### `./bin/build-gitlab`: Run a package's scheduled pipeline
+
+This will run each package's scheduled pipeline task of "Monthly Build".
+
+If this is run under GitLab's CI, it will use the variable `$CI_JOB_TIMEOUT`, to wait between runs, otherwise, will just skip.
+
+```console
+$ ./bin/build-gitlab --all
+[i] Loading GitLab API Key (File: .gitlab-token)
+[i] Found system variable: $SALSA_TOKEN
+[i] Found (sub-)group: https://gitlab.com/kalilinux/packages (ID: 5034987)
+[i] Fetching all projects
+[i] Found 637 projects (https://gitlab.com/kalilinux/packages)
+[-] Missing $CI_JOB_TIMEOUT
+[+] (1/637) Running 'Monthly Build' for 0trace (ID: 11903448)
+[i]       Sleeping: 0 seconds
+[...]
+[+] Done
+$
+```
+
 ### `./bin/clone-gitlab`: Checkout all repositories in a dedicated directory
 
 To checkout all of Kali's packages at once:
@@ -273,6 +294,62 @@ $ ./bin/build-gitlab 0trace zaproxy --dry-run
 [+] (2/2) Running 'Monthly Build' for zaproxy (ID: 11904434)
 [i]       Sleeping: 0 seconds
 [i]       DRY RUN
+[+] Done
+$
+```
+
+### `./bin/gitlab-overview`: Create HTML overview of CI status
+
+This will make a [very quick & dirty "overview"](https://kalilinux.gitlab.io/tools/gitlab-ci) of our [kali-ci-pipeline](https://gitlab.com/kalilinux/tools/kali-ci-pipeline/) status:
+
+```console
+$ ./bin/gitlab-overview
+[>]    Pulling: https://gitlab.com/kalilinux/packages (5034987)
+0trace: success
+[...]
+[i] success : 585
+[i] failed  : 36
+[i] disabled: 12
+[i] running : 0
+[i] unknown : 2
+[+] Done
+$
+$ file ./report.html
+./report.html: HTML document, ASCII text
+$
+```
+
+If successful there will be a single file create `./report.html`.
+
+### `./bin/retry-gitlab`: (Re-)run package's scheduled pipeline
+
+This will run a package's pipeline if its last status was not successful:
+
+```console
+$ ./bin/retry-gitlab --all
+[i] Loading GitLab API Key (File: .gitlab-token)
+[i] Found system variable: $SALSA_TOKEN
+[i] Found (sub-)group: https://gitlab.com/kalilinux/packages (ID: 5034987)
+[i] Fetching all projects
+[i] Found 637 projects (https://gitlab.com/kalilinux/packages)
+[i] Re-running aioconsole (22503415)'s failed job: build ~ https://gitlab.com/kalilinux/packages/aioconsole/-/jobs/4826619222
+[...]
+[+] Re-ran 263 unsuccessful jobs (36 broken pipelines)
+[+] Done
+$
+```
+
+- - -
+
+Otherwise, you can select certain projects to run (if these were not successful):
+
+```console
+$ ./bin/retry-gitlab 0trace zaproxy --quiet
+[i] Loading GitLab API Key (File: .gitlab-token)
+[i] Found system variable: $SALSA_TOKEN
+[i] Found (sub-)group: https://gitlab.com/kalilinux/packages (ID: 5034987)
+[i] Found 2 projects (https://gitlab.com/kalilinux/packages)
+[+] Re-ran 0 unsuccessful jobs (0 broken pipelines)
 [+] Done
 $
 ```
