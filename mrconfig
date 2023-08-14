@@ -1,29 +1,29 @@
 [DEFAULT]
 jobs = 4
-# Ignore svn/cvs metadata
+
+## Ignore svn/cvs metadata
 svn_test = false
 cvs_test = false
-# Checkout the debian branch if it exists
+
+## Checkout the Debian branch if it exists
 post_checkout =
-	cd $MR_REPO
-	if git show-ref -q --verify refs/remotes/origin/debian; then
-	    git branch --track debian origin/debian
-	fi
-# Update the 3 branches, plus the debian branch if it exists
+  cd $MR_REPO
+  if git show-ref -q --verify refs/remotes/origin/debian; then
+    git branch --track debian origin/debian
+  fi
+
+## Update the 3 branches, plus the Debian branch if it exists
 update =
-	gbp pull
-	if git show-ref -q --verify refs/remotes/origin/debian; then
-	    if ! git show-ref -q --verify refs/heads/debian; then
-	        git branch --track debian origin/debian
-	    fi
-	    git fetch origin debian:debian
-	fi
+  gbp pull
+  if git show-ref -q --verify refs/remotes/origin/debian; then
+    if ! git show-ref -q --verify refs/heads/debian; then
+      git branch --track debian origin/debian
+    fi
+    git fetch origin debian:debian
+  fi
 
 [0trace]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/0trace.git
-
-[WIP]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/WIP.git
 
 [aadict]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aadict.git
