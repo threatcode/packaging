@@ -1141,9 +1141,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pipewire-module-xrdp]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pipewire-module-xrdp.git
 
-[plecost]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/plecost.git
-
 [plotext]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/plotext.git
 
