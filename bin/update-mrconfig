@@ -38,6 +38,12 @@ gitlab_curl() {
       --fail \
       --retry 5 \
       $@
+  exitcode=$?
+  if [ "${exitcode}" != "0" ]; then
+    echo "[-] Error with: $@" >&2
+    echo "    Exit code: ${exitcode}" >&2
+    exit 1
+  fi
 }
 
 ## Look for group/sub-group's ID
