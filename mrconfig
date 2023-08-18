@@ -157,6 +157,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [bytecode-viewer]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bytecode-viewer.git
 
+[cabby]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cabby.git
+
 [caldera]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/caldera.git
 
