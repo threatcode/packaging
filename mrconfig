@@ -946,6 +946,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [mitmproxy]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmproxy.git
 
+[mitmproxy-rs]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmproxy-rs.git
+
 [mitmproxy-wireguard]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mitmproxy-wireguard.git
 
