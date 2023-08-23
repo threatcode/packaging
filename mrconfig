@@ -250,6 +250,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [cryptcat]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cryptcat.git
 
+[cti-taxii-client]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cti-taxii-client.git
+
 [ctypescrypto]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ctypescrypto.git
 
@@ -1293,6 +1296,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 
 [python-emailahoy3]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-emailahoy3.git
+
+[python-extproxy]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-extproxy.git
 
 [python-faraday]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-faraday.git
