@@ -1498,6 +1498,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [rizin-cutter]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rizin-cutter.git
 
+[rling]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rling.git
+
 [robotstxt]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/robotstxt.git
 
