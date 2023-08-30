@@ -1237,6 +1237,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pyminifier]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyminifier.git
 
+[pymisp]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pymisp.git
+
 [pypcapfile]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pypcapfile.git
 
