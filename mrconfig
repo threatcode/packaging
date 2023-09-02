@@ -1642,9 +1642,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [sidguesser]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sidguesser.git
 
-[sigma]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sigma.git
-
 [sigma-cli]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sigma-cli.git
 
