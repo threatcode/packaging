@@ -95,6 +95,40 @@ renamed '/home/user/kali/packages/apt2' -> '/home/user/kali/archived/apt2'
 $
 ```
 
+### `./bin/branchprotection-gitlab`: Reset branch protection
+
+This will reset any branch protection, to allow developers to push and merge:
+
+```console
+$ ./bin/branchprotection-gitlab --all
+[i] Fetching all projects
+[i] Total: 637 projects
+[>] Setting branch protection for 0trace ~ https://gitlab.com/kalilinux/packages/0trace
+[...]
+
+[+] Done
+$
+```
+
+- - -
+
+Otherwise, you can select certain projects:
+
+```console
+$ ./bin/branchprotection-gitlab 0trace zaproxy
+[>] Setting branch protection for 0trace ~ https://gitlab.com/kalilinux/packages/0trace
+salsa info: Project 0trace => kalilinux/packages/0trace
+salsa info: kalilinux/packages/0trace id is 11903448
+salsa info: Project 0trace => kalilinux/packages/0trace
+salsa info: kalilinux/packages/0trace id is 11903448
+
+[>] Setting branch protection for zaproxy ~ https://gitlab.com/kalilinux/packages/zaproxy
+[...]
+
+[+] Done
+$
+```
+
 ### `./bin/build-gitlab`: Run a package's scheduled pipeline
 
 This will run each package's scheduled pipeline task of "Monthly Build".
@@ -354,39 +388,6 @@ $ ./bin/retry-gitlab 0trace zaproxy --quiet
 $
 ```
 
-### `./bin/unprotect-gitlab`: Reset branch protection
-
-This will reset any branch protection, to allow developers to push and merge:
-
-```console
-$ ./bin/unprotect-gitlab --all
-[i] Fetching all projects
-[i] Total: 637 projects
-[>] Setting branch protection for 0trace ~ https://gitlab.com/kalilinux/packages/0trace
-[...]
-
-[+] Done
-$
-```
-
-- - -
-
-Otherwise, you can select certain projects:
-
-```console
-$ ./bin/unprotect-gitlab 0trace zaproxy
-[>] Setting branch protection for 0trace ~ https://gitlab.com/kalilinux/packages/0trace
-salsa info: Project 0trace => kalilinux/packages/0trace
-salsa info: kalilinux/packages/0trace id is 11903448
-salsa info: Project 0trace => kalilinux/packages/0trace
-salsa info: kalilinux/packages/0trace id is 11903448
-
-[>] Setting branch protection for zaproxy ~ https://gitlab.com/kalilinux/packages/zaproxy
-[...]
-
-[+] Done
-$
-```
 
 ### `./bin/update-mrconfig`: Update known repos
 

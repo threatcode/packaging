@@ -2,13 +2,13 @@
 #
 # Will (re)set branch protection to allow developers to push and merge on GitLab.com
 #
-# Usage: $ ./bin/unprotect-gitlab [--all|<project1>] [<project2>]
+# Usage: $ ./bin/branchprotection-gitlab [--all|<project1>] [<project2>]
 #   Without argument, will default to: '--all'
 #
 # Example:
-#   $ ./bin/unprotect-gitlab
-#   $ ./bin/unprotect-gitlab --all
-#   $ ./bin/unprotect-gitlab project1 project2
+#   $ ./bin/branchprotection-gitlab
+#   $ ./bin/branchprotection-gitlab --all
+#   $ ./bin/branchprotection-gitlab project1 project2
 #
 # Requirements:
 #   # apt update && apt install --yes --no-install-recommends devscripts libgitlab-api-v4-perl
@@ -35,7 +35,7 @@ fi
 
 if [ ! -e ./salsa.d/auth.conf ]; then
   echo "[-] ERROR: You don't seem to be in the correct directory" >&2
-  echo "    Run this tool from the top-level directory as: ./bin/unprotect-gitlab" >&2
+  echo "    Run this tool from the top-level directory as: ./bin/branchprotection-gitlab" >&2
   exit 1
 fi
 
