@@ -8,7 +8,7 @@
 #
 # Example:
 #   $ ./bin/clone-gitlab
-#   $ ./bin/clone-gitlab ~/kali/packages
+#   $ yes | ./bin/clone-gitlab ~/kali/packages
 #
 # Requirements:
 #   - SSH key added to GitLab.com ~ https://gitlab.com/-/profile/keys

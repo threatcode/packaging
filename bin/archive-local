@@ -9,7 +9,7 @@
 #
 # Example:
 #   $ ./bin/archive-local
-#   $ ./bin/archive-local ~/kali/packages ~/kali/packages/archived
+#   $ yes | ./bin/archive-local ~/kali/packages ~/kali/packages/archived
 #
 # Requirements:
 #   $ ./bin/clone-gitlab
