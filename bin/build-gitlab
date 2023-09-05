@@ -215,6 +215,11 @@ done
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 groupID=$( search_groups "${groupname}" )
+if [ -z "${groupID}" ]; then
+  echo "[-] ERROR: Unable to get group ID for: https://gitlab.com/${groupname}" >&2
+  echo "    Please check your API token: $ cat $( pwd )/${apikey}" >&2
+  exit 1
+fi
 echo "[i] Found (sub-)group: https://gitlab.com/${groupname} (ID: ${groupID})"
 
 if [ "${packages}" = "--all" ]; then
