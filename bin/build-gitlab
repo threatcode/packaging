@@ -26,7 +26,7 @@ set -e
 apikey=".gitlab-token"
 
 ## In seconds, how long to subtract from the runner max running limit
-buffer_time="300"
+buffer_time="480" # 480 = 8 minutes.   300 was too short when runner was 1 hour
 
 ## What (sub-)group to search
 groupname="kalilinux/packages"
