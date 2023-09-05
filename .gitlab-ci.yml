@@ -133,11 +133,11 @@ configure-gitlab:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
-    - (yes || true) | ./bin/configure-gitlab --all
+    - (yes || true) | ./bin/${CI_JOB_NAME} --all
   after_script:
     - rm -v ./.gitlab-token
   rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule" && $JOB == "configure-gitlab"
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $CI_JOB_NAME == $JOB
       when: always
   environment:
     name: production
@@ -159,6 +159,7 @@ pages:
       - public
     expire_in: 1 week
   rules:
+#   - if: $CI_PIPELINE_SOURCE == "schedule" && $CI_JOB_NAME == $JOB # Can't as GitLab pages, require "pages" for the name
     - if: $CI_PIPELINE_SOURCE == "schedule" && $JOB == "gitlab-overview"
       when: always
   environment:
@@ -177,7 +178,7 @@ update-mrconfig:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get --yes --no-install-recommends install curl ca-certificates jq
-    - ./bin/update-mrconfig
+    - ./bin/${CI_JOB_NAME}
   after_script:
     - git status
     - git add mrconfig
@@ -189,7 +190,7 @@ update-mrconfig:
     - git commit -m "${sum} project(s)" || echo "Skipping commit"
     - git push --push-option=ci.skip origin HEAD:${CI_COMMIT_REF_NAME} || echo "Skipping push"
   rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule" && $JOB == "update-mrconfig"
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $CI_JOB_NAME == $JOB
       when: always
     #- if: $CI_COMMIT_REF_NAME == "$CI_DEFAULT_BRANCH"
     #  when: manual
@@ -210,11 +211,11 @@ build-gitlab:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get --yes --no-install-recommends install curl ca-certificates jq
-    - ./bin/build-gitlab --all
+    - ./bin/${CI_JOB_NAME} --all
   after_script:
     - rm -v ./.gitlab-token
   rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule" && $JOB == "build-gitlab"
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $CI_JOB_NAME == $JOB
       when: always
   environment:
     name: production
