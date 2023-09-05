@@ -14,6 +14,17 @@
 ##   - Activated: Enable
 
 ## CI/CD -> Schedules -> New Schedule
+##   - Description: Daily (branchprotection-gitlab)
+##   - Interval Pattern: Custom -> 0 0 * * *
+##   - Cron Timezone: [UTC 0] UTC
+##   - Target branch or tag: main
+##   - Variable:
+##     - Variable
+##     - Input: JOB
+##     - Value: branchprotection-gitlab
+##   - Activated: Enable
+
+## CI/CD -> Schedules -> New Schedule
 ##   - Description: Daily (gitlab-overview)
 ##   - Interval Pattern: Custom -> 0 0 * * *
 ##   - Cron Timezone: [UTC 0] UTC
@@ -127,6 +138,24 @@ configure-gitlab:
   stage: build
   ## Not yet setup for Debian 12 (WIP) !!!
   image: 'docker.io/library/debian:11-slim'
+  before_script:
+    - apt-get --quiet update
+    - echo "SALSA_TOKEN='${GITLAB_PACKAGES_GROUP_ACCESS_TOKEN}'" > ./.gitlab-token
+    - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
+  script:
+    - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
+    - (yes || true) | ./bin/${CI_JOB_NAME} --all
+  after_script:
+    - rm -v ./.gitlab-token
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $CI_JOB_NAME == $JOB
+      when: always
+  environment:
+    name: production
+
+
+branchprotection-gitlab:
+  stage: build
   before_script:
     - apt-get --quiet update
     - echo "SALSA_TOKEN='${GITLAB_PACKAGES_GROUP_ACCESS_TOKEN}'" > ./.gitlab-token
