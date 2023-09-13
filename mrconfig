@@ -1438,9 +1438,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [pywerview]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pywerview.git
 
-[pywinrm]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pywinrm.git
-
 [qsslcaudit]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/qsslcaudit.git
 
