@@ -1324,9 +1324,6 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [python-googlesearch]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-googlesearch.git
 
-[python-graphql-core]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-graphql-core.git
-
 [python-grequests]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-grequests.git
 
