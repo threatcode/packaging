@@ -1684,6 +1684,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [spike]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/spike.git
 
+[spire]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/spire.git
+
 [splinter]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/splinter.git
 
