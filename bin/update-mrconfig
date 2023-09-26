@@ -191,7 +191,7 @@ for package in ${packages}; do
   cat <<EOF>> mrconfig
 
 [${package}]
-checkout = gbp clone --defuse-gitattributes=off --debian-branch=${branch} ${url}${groupname}/${package}.git
+checkout = gbp clone --debian-branch=${branch} ${url}${groupname}/${package}.git
 EOF
 done
 
