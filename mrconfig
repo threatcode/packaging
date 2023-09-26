@@ -544,6 +544,9 @@ checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@
 [golang-github-domainr-whoistest]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-domainr-whoistest.git
 
+[golang-github-ffuf-pencode]
+checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-ffuf-pencode.git
+
 [golang-github-haccer-available]
 checkout = gbp clone --defuse-gitattributes=off --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-haccer-available.git
 
