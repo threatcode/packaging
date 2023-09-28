@@ -1453,6 +1453,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [raspberrypi-userland]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/raspberrypi-userland.git
 
+[raven]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/raven.git
+
 [rcracki-mt]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rcracki-mt.git
 
