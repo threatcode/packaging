@@ -559,8 +559,14 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [golang-github-jpillora-ansi]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jpillora-ansi.git
 
+[golang-github-jpillora-overseer]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jpillora-overseer.git
+
 [golang-github-jpillora-requestlog]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jpillora-requestlog.git
+
+[golang-github-jpillora-s3]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jpillora-s3.git
 
 [golang-github-jpillora-sizestr]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-jpillora-sizestr.git
