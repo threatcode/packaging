@@ -25,6 +25,9 @@ update =
 [0trace]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/0trace.git
 
+[ExifLooter]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ExifLooter.git
+
 [aadict]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aadict.git
 
@@ -1815,6 +1818,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [twofi]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/twofi.git
+
+[tzsetup]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/tzsetup.git
 
 [ubi-reader]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ubi-reader.git
