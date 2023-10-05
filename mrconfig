@@ -25,9 +25,6 @@ update =
 [0trace]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/0trace.git
 
-[ExifLooter]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ExifLooter.git
-
 [aadict]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/aadict.git
 
@@ -411,6 +408,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [exe2hexbat]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/exe2hexbat.git
+
+[exiflooter]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/exiflooter.git
 
 [exploitdb]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/exploitdb.git
