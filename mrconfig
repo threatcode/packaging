@@ -280,6 +280,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [ddrescue]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ddrescue.git
 
+[debian-cd]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/debian-cd.git
+
 [debian-installer]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/debian-installer.git
 
