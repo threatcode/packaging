@@ -184,6 +184,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [cilium-cli]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cilium-cli.git
 
+[ciphey]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ciphey.git
+
 [cipheycore]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cipheycore.git
 
