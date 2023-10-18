@@ -910,14 +910,8 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [libcrafter]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libcrafter.git
 
-[libcrypt-mcrypt-perl]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libcrypt-mcrypt-perl.git
-
 [libfindrtp]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libfindrtp.git
-
-[libnet-pcaputils-perl]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libnet-pcaputils-perl.git
 
 [libstree]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/libstree.git
@@ -1185,6 +1179,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [policykit-1]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/policykit-1.git
+
+[portspoof]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/portspoof.git
 
 [poshc2]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/poshc2.git
