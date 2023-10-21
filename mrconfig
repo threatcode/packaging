@@ -616,6 +616,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [golang-github-tomnomnom-linkheader]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-tomnomnom-linkheader.git
 
+[golang-github-trung-jwt-tools]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-trung-jwt-tools.git
+
 [golang-go.dedis-fixbuf]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-go.dedis-fixbuf.git
 
