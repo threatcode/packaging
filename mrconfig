@@ -1267,9 +1267,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [pymetasploit3]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pymetasploit3.git
 
-[pyminifier]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyminifier.git
-
 [pymisp]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pymisp.git
 
