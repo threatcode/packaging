@@ -961,6 +961,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [merlin]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/merlin.git
 
+[merlin-agent]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/merlin-agent.git
+
 [metagoofil]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/metagoofil.git
 
