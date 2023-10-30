@@ -409,6 +409,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [enum4linux]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/enum4linux.git
 
+[enum4linux-ng]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/enum4linux-ng.git
+
 [enumiax]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/enumiax.git
 
