@@ -97,6 +97,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [asysocks]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/asysocks.git
 
+[autopsy]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/autopsy.git
+
 [b374k]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/b374k.git
 
