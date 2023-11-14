@@ -1141,6 +1141,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [partman-btrfs]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/partman-btrfs.git
 
+[passdetective]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/passdetective.git
+
 [passing-the-hash]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/passing-the-hash.git
 
