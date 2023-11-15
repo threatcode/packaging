@@ -661,6 +661,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [grub2]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/grub2.git
 
+[h8mail]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/h8mail.git
+
 [hak5-wifi-coconut]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/hak5-wifi-coconut.git
 
