@@ -766,6 +766,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [inviteflood]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/inviteflood.git
 
+[ip2proxy-python]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ip2proxy-python.git
+
 [ismtp]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ismtp.git
 
@@ -1470,6 +1473,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [python-zlib-wrapper]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-zlib-wrapper.git
+
+[pythonping]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pythonping.git
 
 [pyuserinput]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/pyuserinput.git
