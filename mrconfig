@@ -1525,6 +1525,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [rebind]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/rebind.git
 
+[reconspider]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/reconspider.git
+
 [recstudio]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/recstudio.git
 
@@ -1722,6 +1725,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [smtp-user-enum]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/smtp-user-enum.git
+
+[sn0int]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sn0int.git
 
 [sniffjoke]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sniffjoke.git
