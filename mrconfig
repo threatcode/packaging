@@ -283,6 +283,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [cymothoa]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cymothoa.git
 
+[daq]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/daq.git
+
 [davtest]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/davtest.git
 
