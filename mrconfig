@@ -1741,6 +1741,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [snmpenum]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/snmpenum.git
 
+[snort]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/snort.git
+
 [sparrow-wifi]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparrow-wifi.git
 
