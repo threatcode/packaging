@@ -1717,6 +1717,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [skipfish]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/skipfish.git
 
+[sleuthkit]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sleuthkit.git
+
 [slimtoolkit]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/slimtoolkit.git
 
@@ -1746,6 +1749,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [sparrow-wifi]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparrow-wifi.git
+
+[sparsebitset]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparsebitset.git
 
 [sparta-scripts]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparta-scripts.git
