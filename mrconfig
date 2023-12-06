@@ -370,6 +370,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [dpkg]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/dpkg.git
 
+[dploot]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/dploot.git
+
 [dradis]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/dradis.git
 
