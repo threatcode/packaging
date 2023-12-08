@@ -144,7 +144,7 @@ configure-gitlab:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
-    - (yes || true) | ./bin/${CI_JOB_NAME} --all
+    - (yes || true) | ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
   rules:
@@ -162,7 +162,7 @@ branchprotection-gitlab:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
-    - (yes || true) | ./bin/${CI_JOB_NAME} --all
+    - (yes || true) | ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
   rules:
@@ -179,7 +179,7 @@ pages:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get --yes --no-install-recommends install curl ca-certificates jq
-    - ./bin/gitlab-overview
+    - ./bin/gitlab-overview 2>&1
   after_script:
     - mkdir -pv ./public/
     - mv -v ./report.html ./public/index.html
@@ -207,7 +207,7 @@ update-mrconfig:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get --yes --no-install-recommends install curl ca-certificates jq
-    - ./bin/${CI_JOB_NAME}
+    - ./bin/${CI_JOB_NAME} 2>&1
   after_script:
     - git status
     - git add mrconfig
@@ -240,7 +240,7 @@ build-gitlab:
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
     - apt-get --yes --no-install-recommends install curl ca-certificates jq
-    - ./bin/${CI_JOB_NAME} --all
+    - ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
   rules:
