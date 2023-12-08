@@ -6,7 +6,7 @@
 # Usage: $ ./bin/gitlab-overview
 #
 # Example:
-#   $ ./bin/gitlab-build
+#   $ ./bin/gitlab-overview
 #
 # Requirements:
 #   # apt update && apt install --yes --no-install-recommends curl ca-certificates jq
