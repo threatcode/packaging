@@ -143,7 +143,7 @@ configure-gitlab:
     - echo "SALSA_TOKEN='${GITLAB_PACKAGES_GROUP_ACCESS_TOKEN}'" > ./.gitlab-token
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
-    - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
+    - apt-get --yes --no-install-recommends install devscripts libgitlab-api-v4-perl
     - (yes || true) | ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
@@ -161,7 +161,7 @@ branchprotection-gitlab:
     - echo "SALSA_TOKEN='${GITLAB_PACKAGES_GROUP_ACCESS_TOKEN}'" > ./.gitlab-token
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
-    - apt-get -y --no-install-recommends install devscripts libgitlab-api-v4-perl
+    - apt-get --yes --no-install-recommends install devscripts libgitlab-api-v4-perl
     - (yes || true) | ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
