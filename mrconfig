@@ -976,6 +976,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [massdns]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/massdns.git
 
+[mchange-commons-java]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/mchange-commons-java.git
+
 [merlin]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/merlin.git
 
