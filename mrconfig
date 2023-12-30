@@ -1765,6 +1765,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [sparta-scripts]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sparta-scripts.git
 
+[sphinxcontrib-excel]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sphinxcontrib-excel.git
+
 [spiderfoot]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/spiderfoot.git
 
