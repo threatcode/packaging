@@ -217,9 +217,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [cloudflare-scrape]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cloudflare-scrape.git
 
-[cloudscraper]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cloudscraper.git
-
 [cmospwd]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/cmospwd.git
 
@@ -478,9 +475,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [ferret-sidejack]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ferret-sidejack.git
 
-[ffuf]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/ffuf.git
-
 [fiked]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/fiked.git
 
@@ -547,9 +541,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [gnome-terminal]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gnome-terminal.git
 
-[gobuster]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/gobuster.git
-
 [godoh]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/godoh.git
 
@@ -576,9 +567,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [golang-github-domainr-whoistest]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-domainr-whoistest.git
-
-[golang-github-ffuf-pencode]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-ffuf-pencode.git
 
 [golang-github-haccer-available]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/golang-github-haccer-available.git
@@ -1386,9 +1374,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [python-googlesearch]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-googlesearch.git
-
-[python-grequests]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-grequests.git
 
 [python-httpagentparser]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-httpagentparser.git
