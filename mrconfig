@@ -1690,9 +1690,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [shellter]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/shellter.git
 
-[sherlock]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sherlock.git
-
 [sidguesser]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/sidguesser.git
 
