@@ -73,6 +73,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [apple-bleee]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/apple-bleee.git
 
+[apt]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/apt.git
+
 [arc4]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/arc4.git
 
