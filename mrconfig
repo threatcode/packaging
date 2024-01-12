@@ -829,9 +829,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [kali-community-wallpapers]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-community-wallpapers.git
 
-[kali-debtags]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-debtags.git
-
 [kali-defaults]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/kali-defaults.git
 
