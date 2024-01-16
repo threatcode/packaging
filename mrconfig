@@ -136,6 +136,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [bing-ip2hosts]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bing-ip2hosts.git
 
+[blackduck]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/blackduck.git
+
 [bloodhound]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/bloodhound.git
 
@@ -342,9 +345,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [django-multiselectfield]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-multiselectfield.git
-
-[django-ratelimit]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-ratelimit.git
 
 [django-tagulous]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-tagulous.git
@@ -1923,6 +1923,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 
 [voiphopper]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/voiphopper.git
+
+[vulners]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/vulners.git
 
 [watobo]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/watobo.git
