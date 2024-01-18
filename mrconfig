@@ -493,6 +493,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [firmware-nonfree]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/firmware-nonfree.git
 
+[flask-celery-helper]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-celery-helper.git
+
 [flask-jsglue]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/flask-jsglue.git
 
