@@ -1375,6 +1375,9 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [python-flask-classful]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-flask-classful.git
 
+[python-fontawesomefree]
+checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-fontawesomefree.git
+
 [python-googlesearch]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/python-googlesearch.git
 
