@@ -42,10 +42,10 @@ record_change() {
   shift
 
   git add "${@:-.}"
-  if ! git diff --quiet HEAD -- "$@" >/dev/null; then
+  if ! git diff --quiet HEAD -- "${@:-.}" >/dev/null; then
     _changed=1
     if [ ${opt_commit} -eq 1 ]; then
-      git commit -q -m "$message" "$@"
+      git commit -q -m "$message" "${@:-.}"
       if [ ${opt_verbose} -gt 0 ]; then
         echo "** NEW CHANGE: ${message} **"
       fi

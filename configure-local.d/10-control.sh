@@ -73,4 +73,4 @@ if [ -e ${copyright_file} ]; then
   sed -i -e "s|^Source: http://www.kali.org|Source: https://www.kali.org|i" "${copyright_file}"
   extra=${copyright_file}
 fi
-record_change "Use HTTPS URL for www.kali.org" "${control_file}" "${extra}"
+record_change "Use HTTPS URL for www.kali.org" "${control_file}" ${extra}
