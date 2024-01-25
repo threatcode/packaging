@@ -337,9 +337,6 @@ checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packag
 [django-crum]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-crum.git
 
-[django-dbbackup]
-checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-dbbackup.git
-
 [django-fieldsignals]
 checkout = gbp clone --debian-branch=kali/master git@gitlab.com:kalilinux/packages/django-fieldsignals.git
 
