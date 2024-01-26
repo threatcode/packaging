@@ -85,10 +85,10 @@ if [ -n "${SALSA_TOKEN}" ]; then
 fi
 ## Final check
 if [ -z "${GITLAB_TOKEN}" ]; then
-  echo "[-] ERROR: You are missing either: ${APIKEY} or a system variable: \$APIKEY" 1>&2
+  echo "[-] ERROR: You are missing either: ${APIFILE} or a system variable: \$APIKEY" 1>&2
   echo "    Visit: https://gitlab.com/profile/personal_access_tokens" 1>&2
   echo "    Create a new key (which has API permission)" 1>&2
-  echo "    Afterwards: echo \"SALSA_TOKEN='XXX'\" > ${APIKEY}" 1>&2 # SALSA_TOKEN is due to Debian's devscripts's salsa.pl
+  echo "    Afterwards: echo \"SALSA_TOKEN='XXX'\" > ${APIFILE}" 1>&2 # SALSA_TOKEN is due to Debian's devscripts's salsa.pl
   exit 1
 fi
 
