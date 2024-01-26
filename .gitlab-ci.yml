@@ -127,6 +127,8 @@ variables:
   AUTHOR_NAME: "GitLab CI"
   # Email that appears in the commit log
   AUTHOR_EMAIL: "gitlab-ci@kali.org"
+  ## Need devscripts to be or higher than 2.23.7 (Debian 13)
+  DEVSCRIPTS_VER: 2.23.7
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -136,14 +138,19 @@ variables:
 
 configure-gitlab:
   stage: build
-  ## Not yet setup for Debian 12 (WIP) !!!
-  image: 'docker.io/library/debian:11-slim'
+  ## REF: https://hub.docker.com/_/debian/
+  image: 'docker.io/library/debian:testing-slim' # Need devscripts to be or higher than 2.23.7 (Debian 13)
   before_script:
     - apt-get --quiet update
+    - apt-get --yes --no-install-recommends install git ca-certificates
+    - git clone --depth=1 https://gitlab.com/kalilinux/packages/kali-menu.git ./kali-menu/
+    - mv -vf ./kali-menu/menu-icons/256x256/apps/kali-{searchsploit,exploitdb}.png
+    - ln -svf ./kali-menu/menu-icons/256x256/apps/kali-exploitdb{,-bin-sploits}.png
+    - ln -svf ./kali-menu/menu-icons/256x256/apps/kali-exploitdb{,-papers}.png
     - echo "SALSA_TOKEN='${GITLAB_PACKAGES_GROUP_ACCESS_TOKEN}'" > ./.gitlab-token
     - unset GITLAB_PACKAGING_PROJECT_ACCESS_TOKEN GITLAB_PACKAGES_GROUP_ACCESS_TOKEN
   script:
-    - apt-get --yes --no-install-recommends install devscripts libgitlab-api-v4-perl
+    - apt-get --yes --no-install-recommends install devscripts=$DEVSCRIPTS_VER libgitlab-api-v4-perl
     - (yes || true) | ./bin/${CI_JOB_NAME} --all 2>&1
   after_script:
     - rm -v ./.gitlab-token
